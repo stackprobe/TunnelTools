@@ -1,0 +1,18 @@
+----
+■コマンドライン
+
+	namedTrack.exe RECV-PORT FWD-HOST FWD-PORT /S
+
+		/S ... このオプションを指定すると既に起動している namedTrack.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
+
+	namedTrack.exe RECV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX] TRACK-NAME
+
+		CONNECT-MAX ... 最大接続数, 省略時は 1000
+		TRACK-NAME  ... トラック名
+
+----
+■トラック名
+
+	使用できる文字は 0～9 A～Z a～z _ - . : です。
+	文字数は 1～100 です。

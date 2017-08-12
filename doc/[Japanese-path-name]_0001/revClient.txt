@@ -1,0 +1,16 @@
+----
+■コマンドライン
+
+	revClient.exe REV-HOST REV-PORT FWD-HOST FWD-PORT /S
+
+		/S ... このオプションを指定すると既に起動している revClient.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
+
+	revClient.exe REV-HOST REV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX] [/P POLLING-CYCLE]
+
+		REV-HOST      ... 中継元ホスト名
+		REV-PORT      ... 中継元ポート番号
+		FWD-HOST      ... 転送先ホスト名
+		FWD-PORT      ... 転送先ポート番号
+		CONNECT-MAX   ... 最大接続数, 省略時は 1000
+		POLLING-CYCLE ... 逆流元に問い合わせする間隔, 単位はミリ秒, 省略時は 2000

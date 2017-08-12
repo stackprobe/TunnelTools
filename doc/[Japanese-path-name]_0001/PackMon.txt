@@ -1,0 +1,71 @@
+----
+■コマンドライン
+
+	PackMon.exe /S
+
+		/S ... このオプションを指定すると既に起動している PackMon.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
+
+	PackMon.exe [/NIC NIC-IP-ADDRESS] [/F OUTPUT-FILE]
+
+		NIC-IP-ADDRESS ... 監視を行うNICのIPアドレスを指定します。
+		                   省略時は最初に見つかったNICになります。
+		                   NICが1つしかない場合は特に指定する必要ありません。
+
+		OUTPUT-FILE    ... キャプチャデータを出力するファイルを指定します。
+		                   省略時は stdout に出力します。
+
+----
+■使い方
+
+	プログラムを起動するとキャプチャを開始します。
+	エスケープキーを押すか PackMon /S を実行するとキャプチャを終了し、
+	キャプチャデータを出力してプログラムを終了します。
+
+	送信パケットしかキャプチャできない時はファイアーウォールを無効にすると何とかなるようです。
+
+----
+■出力ファイル
+
+	書式：CSV
+	文字コード：Shift_JIS（たぶんUS-ASCIIのみ）
+
+	列の一覧
+
+	    共通/IP/TCP                UDP
+	---------------------------------------------------
+	A   日時
+	B   IP_VERSION
+	C   IP_INTERNET_HEADER_LENGTH
+	D   IP_DIFFERENTIATED_SERVICE_CODE_POINT
+	E   IP_EXPLICIT_CONGESTION_NOTIFICATION
+	F   IP_TOTAL_LENGTH
+	G   IP_IDENTIFICATION
+	H   IP_FLAGS
+	I   IP_FRAGMENT_OFFSET
+	J   IP_TIME_TO_LIVE
+	K   IP_PROTOCOL
+	L   IP_HEADER_CHECKSUM
+	M   IP_SOURCE_IP_ADDRESS
+	N   IP_DESTINATION_IP_ADDRESS
+	O   IP_OPTIONS
+	P   TCP_SOURCE_PORT            UDP_SOURCE_PORT
+	Q   TCP_DESTINATION_PORT       UDP_DESTINATION_PORT
+	R   TCP_SEQUENCE_NUMBER        UDP_LENGTH
+	S   TCP_ACKNOWLEDGMENT_NUMBER  UDP_CHECKSUM
+	T   TCP_DATA_OFFSET            空欄
+	U   TCP_RESERVED               空欄
+	V   TCP_NS                     空欄
+	W   TCP_CWR                    空欄
+	X   TCP_ECE                    空欄
+	Y   TCP_URG                    空欄
+	Z   TCP_ACK                    空欄
+	AA  TCP_PSH                    空欄
+	AB  TCP_RST                    空欄
+	AC  TCP_SYN                    空欄
+	AD  TCP_FIN                    空欄
+	AE  TCP_WINDOW_SIZE            空欄
+	AF  TCP_CHECKSUM               空欄
+	AG  TCP_URGENT_POINTER         空欄
+	AH  TCP_OPTIONS                空欄
+	AI  以降のデータ

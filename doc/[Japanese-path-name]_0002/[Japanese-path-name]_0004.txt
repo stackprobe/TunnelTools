@@ -1,0 +1,81 @@
+----
+
+１つのポートにまとめた複数のサービスを元の複数のポートに分配します。
+複数のサービス（ポート番号）に対して１つのポートしか開放できない時に使います。
+
+----
+■コマンドライン
+
+	> start namedTrack 待ち受けポート番号 転送先ホスト名 転送先ポート番号 識別名
+
+		転送先ホスト名、転送先ポート番号は multiTrack にします。
+
+	> start multiTrack 待ち受けポート番号 NONE 1 [識別名 転送先ホスト名 転送先ポート番号]...
+
+		namedTrack で指定された識別名の転送先が選択されます。
+
+	識別名
+
+		文字数: 1～100
+		使用できる文字: 半角英数, 半角ピリオド, 半角コロン
+
+----
+■使用例(1)
+
+ネットワーク構成
+
+	ホスト名   IP                Listen Port
+	----------------------------------------
+	ABC        192.168.111.101   51000,52000
+
+以下のコマンドを ABC で実行すると、
+ABC:51000 の代わりに ABC:61000, ABC:52000 の代わりに ABC:62000 に接続できます。
+
+	> start namedTrack 61000 ABC 50000 BRIGHT
+	> start namedTrack 62000 ABC 50000 WINDY
+	> start multiTrack 50000 NONE 1 BRIGHT ABC 51000 WINDY ABC 52000
+
+経路は以下のとおり、どちらも ABC:50000 を通ります。
+
+	ABC:61000 -> ABC:50000 -> ABC:51000
+	ABC:62000 -> ABC:50000 -> ABC:52000
+
+----
+■使用例(2)
+
+ネットワーク構成
+
+	ホスト名   IP               Network   Listen Port         Port Forward             note
+	----------------------------------------------------------------------------------------------
+	Flora     192.168.111.101   A         none
+	Mermaid   192.168.111.102   A         60000                                        ルータ_外側
+
+	Mermaid   192.168.222.201   B         none                60000 -> Twinkle:60000   ルータ_内側
+	Twinkle   192.168.222.202   B         51000,52000,53000
+
+Flora 又は Network A から Twinkle:51000,52000,53000 へ接続できるようにするには以下のようにします。
+
+	1. Flora で以下のコマンドを実行する。
+
+		> start namedTrack 61000 Mermaid 60000 black
+		> start namedTrack 62000 Mermaid 60000 white
+		> start namedTrack 63000 Mermaid 60000 luminous
+
+		または
+
+		> start namedTrack 61000 192.168.111.102 60000 black
+		> start namedTrack 62000 192.168.111.102 60000 white
+		> start namedTrack 63000 192.168.111.102 60000 luminous
+
+	2. Twinkle で以下のコマンドを実行する。
+
+		> start multiTrack 60000 NONE 1 black localhost 51000 white localhost 52000 luminous localhost 53000
+
+	3. Flora 又は Network A から以下のように接続する。
+
+		any host -> Twinkle:51000 の代わりに any host -> Flora:61000 に接続する。
+		any host -> Twinkle:52000 の代わりに any host -> Flora:62000 に接続する。
+		any host -> Twinkle:53000 の代わりに any host -> Flora:63000 に接続する。
+
+
+★ホスト名, IPアドレス, ポート番号は実際の環境にあわせて変更して下さい。

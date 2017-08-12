@@ -1,0 +1,18 @@
+----
+■説明
+
+	ホスト名・ドメイン名からIPアドレスを得ます。
+
+----
+■コマンドライン
+
+	Lookup [DOMAIN-NAME]
+
+		DOMAIN-NAME ... ホスト名またはドメイン名（省略するとローカルホスト）
+
+----
+■実行例
+
+	> Lookup
+	> Lookup Freedom
+	> Lookup stackprobe.dip.jp

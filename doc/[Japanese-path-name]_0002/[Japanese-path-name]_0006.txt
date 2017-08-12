@@ -1,0 +1,42 @@
+----
+
+ポートフォワーディングするついでにHTTPリクエスト・レスポンスの内容を保存します。
+
+----
+■使用例
+
+前提
+
+	WEB-SERVER:80 に Web サーバーが立っているとします。
+
+準備
+
+	以下の空のフォルダを用意します。
+
+		C:\temp\HTTP_MON_OUT
+		C:\temp\HTTP_MON_PARSE
+
+手順
+
+	1. 以下のコマンドを実行する。
+
+		> start httpMonitor 80 WEB-SERVER 80 C:\HTTP_MON_OUT
+
+	2. http://WEB-SERVER/ の代わりに http://localhost/ に接続する。
+
+	3. 通信が終わったら httpMonitor.exe を停止する。
+
+		エスケープキー押下又は以下のコマンドを実行する。
+
+			> httpMonitor 80 WEB-SERVER 80 /s
+
+	4. 以下のコマンドを実行する。
+
+		> httpMonParse C:\temp\HTTP_MON_OUT C:\temp\HTTP_MON_PARSE
+
+以下のフォルダに通信内容が出力されているはずです。
+
+	C:\temp\HTTP_MON_PARSE
+
+
+★ホスト名, IPアドレス, ポート番号, ディレクトリ名は実際の環境にあわせて変更して下さい。

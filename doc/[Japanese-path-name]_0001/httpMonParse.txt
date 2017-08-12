@@ -1,0 +1,9 @@
+----
+■コマンドライン
+
+	httpMonParse.exe INPUT-DIR OUTPUT-DIR
+
+		INPUT-DIR  ... 入力ディレクトリ
+		OUTPUT-DIR ... 出力ディレクトリ
+
+	入力・出力ディレクトリは、存在するディレクトリであること。

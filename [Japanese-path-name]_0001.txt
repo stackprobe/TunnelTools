@@ -1,0 +1,25 @@
+■以下の外部ファイルをリリース物に含める。
+
+	C:\Factory\Labo\Socket\tunnel\boomClient.exe
+	C:\Factory\Labo\Socket\tunnel\boomServer.exe
+	C:\Factory\Labo\Socket\tunnel\crypTunnel.exe
+	C:\Factory\Labo\Socket\tunnel\GeTunnel.exe
+	C:\Factory\Labo\Socket\tunnel\httpMonitor.exe
+	C:\Factory\Labo\Socket\tunnel\httpMonParse.exe
+	C:\Factory\Labo\Socket\tunnel\HTTPProxy.exe
+	C:\Factory\Labo\Socket\tunnel\multiTrack.exe
+	C:\Factory\Labo\Socket\tunnel\namedTrack.exe
+	C:\Factory\Labo\Socket\tunnel\PackMon.exe
+	C:\Factory\Labo\Socket\tunnel\revClient.exe
+	C:\Factory\Labo\Socket\tunnel\revServer.exe
+	C:\Factory\Labo\Socket\tunnel\SmplProxy.bat
+	C:\Factory\Labo\Socket\tunnel\SmplProxyPrms.txt
+	C:\Factory\Labo\Socket\tunnel\Spoof.exe
+	C:\Factory\Labo\Socket\tunnel\Tunnel.exe
+	C:\Factory\Labo\Socket\tunnel\Tunnel2.exe
+	C:\Factory\Labo\Socket\tunnel\T2DivId.exe
+	C:\Factory\Labo\Socket\tunnel\T2DiHTTP.exe
+	C:\Factory\Tools\Lookup.exe
+	C:\Factory\Tools\mkcr.exe
+	C:\Factory\Resource\CP932.txt
+	C:\Factory\Resource\JIS0208.txt

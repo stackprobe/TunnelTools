@@ -1,0 +1,105 @@
+----
+■コマンドライン
+
+	crypTunnel.exe RECV-PORT FWD-HOST FWD-PORT /S
+
+		/S ... このオプションを指定すると既に起動している crypTunnel.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
+
+	crypTunnel.exe RECV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX] [/R] [/KW KEY-WIDTH] [/0] [/BSL BLOCK-SIZE-LIMIT] [/T] KEY-BUNDLE-FILE
+
+		RECV-PORT        ... 待ち受けポート番号
+		FWD-DOMAIN       ... 転送先ホスト名
+		FWD-PORT         ... 転送先ポート番号
+		CONNECT-MAX      ... 最大同時接続数, デフォルト: 50
+		/R               ... リバースモード
+		KEY-WIDTH        ... 鍵幅 (16, 24, 32) デフォルト: 32
+		KEY-BUNDLE-FILE  ... 鍵束ファイル
+		/0               ... 数秒おきにゼロバイトのブロックを暗号化したデータを送り、送信が途絶する期間を数秒以内に留める。
+		BLOCK-SIZE-LIMIT ... 一度に暗号化するブロックサイズの上限を設定します, デフォルト: 無制限
+		/T               ... GeTunnelと併用したとき、長時間の無通信によるタイムアウトが頻発する場合これを指定して下さい。
+
+----
+■鍵束ファイル
+
+	mkcr などによって生成した鍵束ファイルを指定して下さい。
+
+	ファイル名の代わりに * を指定すると、パスフレーズを直接入力します。
+	また *PASS_PHRASE を指定すると PASS_PHRASE をパスフレーズとして使用します。(PASS_PHRASE は任意の文字列)
+	パスフレーズの Shift_JIS のバイト列の SHA-512 を鍵として使用します。
+
+----
+■パスフレーズの延長
+
+	パスフレーズの最後が [CNN] である場合、パスフレーズを延長します。
+
+		C ... 半角文字
+		N ... 半角数字
+
+	パスフレーズの後ろに C を 2^NN 文字追加します。
+	NN に指定できる範囲は 10～40 です。
+
+	例えば
+
+		abc[e30]
+
+	は
+
+		abceeeeeeeee...eeeeeeeee
+		   |<---- 2^30 個 ---->|
+
+	になります。
+
+	パスフレーズが長くなると鍵の生成に時間が掛かるため、総当り攻撃対策になる・・・ような気がします。
+
+----
+■暗号化の実装
+
+	●ネゴシエーション
+
+	以下の手順を実行します。
+
+	 1. DEC_COUNTER <- ランダムなバイト列 (64 バイト)
+	 2. CIPHER_1 = ENCRYPT ( DEC_COUNTER )
+	 3. 通信相手と CIPHER_1 を交換する。
+	 4. ENC_COUNTER = DECRYPT ( CIPHER_1 )
+	 5. ENC_COUNTER をインクリメントする。
+	 6. CIPHER_2 = ENCRYPT ( ENC_COUNTER )
+	 7. 通信相手と CIPHER_2 を交換する。
+	 8. WRK_COUNTER = DECRYPT ( CIPHER_2 )
+	 9. DEC_COUNTER をインクリメントする。
+	10. DEC_COUNTER と WRK_COUNTER を比較して一致しなければ直ちに切断する。
+
+		ENCRYPT ... 最後のブロックを IV とする Camellia CBC を鍵束の鍵の数だけ繰り返す。
+		DECRPYT ... ENCRYPT の逆を行う。
+
+		★暗号化時の COUNTER として ENC_COUNTER, 復号時の COUNTER として DEC_COUNTER をそれぞれ使用します。
+		★乱数は CSPRNG から取得します。
+
+	●通信
+
+	入力ストリームを適当な長さで区切って、以下の暗号化を実行します。
+
+	CIPHER = ENCRYPT ( PLAIN + COUNTER + PADDING + PADDING_SIZE + RAND_PART_1 + HASH + RAND_PART_2 )
+
+		CIPHER       ... 暗号文
+		PLAIN        ... 平文
+		COUNTER      ... カウンタ, 暗号化する度にインクリメントする。(64 バイト)
+		PADDING      ... ランダムなバイト列 (1～255 バイト, PLAIN + COUNTER + PADDING + PADDING_SIZE の長さが 16 の倍数となるランダムな長さ)
+		PADDING_SIZE ... PADDING のバイト数 (1 バイト)
+		RAND_PART_1  ... ランダムなバイト列 (64 バイト)
+		HASH         ... PLAIN + COUNTER + PADDING + PADDING_SIZE + RAND_PART_1 の SHA-512 (64 バイト)
+		RAND_PART_2  ... ランダムなバイト列 (64 バイト)
+		ENCRYPT      ... 最後のブロックを IV とする Camellia CBC を鍵束の鍵の数だけ繰り返す。
+
+		★復号時 HASH をチェックし、一致しなかった場合、破損又は改ざんと見なし、直ちに切断します。
+		★乱数は CSPRNG から取得します。
+
+----
+■実行例
+
+	> crypTunnel 61000 ABC 62000 C:\KEYS\123.kb
+
+	> crypTunnel 61000 ABC 62000 *
+
+	> crypTunnel 61000 ABC 62000 *aaabbbccc[x30]

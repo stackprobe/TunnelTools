@@ -1,0 +1,18 @@
+----
+■説明
+
+	CSPRNGを使って乱数列を生成します。
+
+----
+■コマンド
+
+	mkcr [/F KB-FILE] [KEY-NUM [KEY-WIDTH]]
+
+		KB-FILE   ... 鍵束ファイル出力先（省略すると一時ファイル）
+		KEY-NUM   ... 鍵の数
+		KEY-WIDTH ... 鍵のバイト数
+
+----
+■実行例
+
+	> mkcr /f C:\KEYS\abc123.keybdl

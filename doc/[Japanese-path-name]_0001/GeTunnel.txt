@@ -1,0 +1,32 @@
+----
+■コマンドライン
+
+	GeTunnel.exe RECV-PORT FWD-HOST FWD-PORT /S
+
+		/S ... このオプションを指定すると既に起動している GeTunnel.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
+
+	GeTunnel.exe RECV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX] [/P PROXY-HOST PROXY-PORT] [/R]
+	                                         [/E EMBED-MODE] [/BS BUFF-FULL] [/EF ERROR-PAGE-FILE]
+	                                         [/XRH EXTRA-REQ-RES-HEADER-LINES-FILE]
+
+		CONNECT-MAX     ... 最大接続数, 省略時は 50
+		PROXY-HOST      ... プロキシサーバー
+		PROXY-PORT      ... プロキシサーバーのポート番号
+		/R              ... サーバーモード
+		EMBED-MODE      ... 埋め込みモード
+		BUFF-FULL       ... 送受信バッファの最大サイズ。
+		                    リクエスト・レスポンスの最大サイズより少し大きめにすること。
+		ERROR-PAGE-FILE ... エラー応答ファイル
+		EXTRA-REQ-RES-HEADER-LINES-FILE ... 拡張ヘッダー行リストファイル
+
+		★タイムアウトは無い。
+
+----
+■埋め込みモード
+
+	実際の通信データをHTTPリクエストの何処に埋め込むか指定します。
+
+	1 ... HTTPリクエストのクエリ、下りはボディ（デフォルト）
+	2 ... クッキー
+	3 ... ヘッダーフィールド勝手に作ってそこに

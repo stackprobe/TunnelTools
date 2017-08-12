@@ -1,0 +1,1 @@
+HTTPProxy.exe 8080 a 1 //f SmplProxyPrms.txt /f- "HTTPPBodyFilter.exe image/ image/png sample\0005\Face.png"

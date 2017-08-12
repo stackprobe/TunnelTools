@@ -1,0 +1,43 @@
+----
+■コマンドライン
+
+	multiTrack.exe RECV-PORT DEF-FWD-HOST DEF-FWD-PORT /S
+
+		/S ... このオプションを指定すると既に起動している multiTrack.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
+
+	multiTrack.exe RECV-PORT DEF-FWD-HOST DEF-FWD-PORT [/C CONNECT-MAX] [TRACK-NAME FWD-HOST FWD-PORT | /F FWD-FILE]...
+
+		CONNECT-MAX ... 最大接続数, 省略時は 1000
+		TRACK-NAME  ... トラック名
+		FWD-HOST    ... 転送先ホスト名
+		FWD-PORT    ... 転送先ポート番号
+		FWD-FILE    ... 転送先リスト定義ファイル
+
+		★ DEF-FWD-HOST に NONE を指定すると、デフォルトの転送先は無効になります。
+
+		★ DEF-FWD-HOST に RED を指定すると、リダイレクト・モード（トラック名が転送先）になります。
+
+	- - - -
+
+	転送先リスト定義ファイル
+
+		テキストファイルで、空行と半角セミコロンで始まる行は無視します。
+		各行は以下のように記述します。
+
+			ホスト名 + 空白 + 転送先ホスト名 + 空白 + 転送先ポート番号
+
+----
+■トラック名
+
+	使用できる文字は 0～9 A～Z a～z _ - . : です。
+	文字数は 1～100 です。
+
+	- - - -
+
+	リダイレクト・モードでトラック名に転送先を指定するには次のようにします。
+
+		ホスト名
+		ホスト名 + ':' + ポート番号
+
+	ポート番号を省略した場合は FWD_PORT になります。

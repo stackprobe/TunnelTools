@@ -1,0 +1,78 @@
+----
+
+接続先のサーバーが接続元のサーバーをポーリングして、接続先から接続元にコネクションを張ります。
+
+----
+■コマンド
+
+	> revServer 待ち受けポート番号 a 1
+
+		第２、３引数は固定
+
+	> namedTrack 待ち受けポート番号 revServer_ホスト名 revServer_ポート番号 トラック名
+
+		トラック名
+
+			使用できる文字は 0～9 A～Z a～z _ . : です。
+			文字数は 1～100 です。
+
+			フォーマット NAME:POLE です。
+			接続させたい２つのトラック名は NAME に同じ文字列 POLE に異なる文字列を指定します。
+
+			revClient から接続されている場合、トラック名の最後に .R を付けます。
+
+	> revClient namedTrack_ホスト名 namedTrack_ポート番号 転送先ホスト名 転送先ポート番号
+
+----
+■使用例
+
+ネットワーク構成
+
+	ホスト名   IP                Listen Port   Network   note
+	---------------------------------------------------------
+	Diamond    192.168.111.101   none          A
+	Rosetta    192.168.111.102   none          A
+	Regina     192.168.111.103   none          A         ルータ_外側
+
+	Heart      192.168.222.201   5800          B
+	Sword      192.168.222.202   none          B
+	Regina     192.168.222.203   none          B         ルータ_内側
+
+Diamond -> Heart:5800 は Regina に阻まれて接続できません。
+接続できるようにするには以下のようにします。
+
+	a. Diamond -> Rosetta:50001 ->(50002 <-) Sword -> Heart:5800 と中継する。
+
+		1. Rosetta で以下のコマンドを実行します。
+
+			> start revServer 58000 a 1
+			> start namedTrack 50001 localhost 58000 rosetta:reflection
+			> start namedTrack 50002 localhost 58000 rosetta:wall.R
+
+		2. Sword で以下のコマンドを実行します。
+
+			> start revClient Rosetta 50002 Heart 5800
+
+			または
+
+			> start revClient 192.168.111.102 50002 Heart 5800
+
+		3. Diamond -> Heart:5800 の代わりに Diamond -> Rosetta:50001 に接続する。
+
+	b. Diamond ->(<-) Heart と他のホストを使わずに接続する。
+
+		1. Diamond で以下のコマンドを実行します。
+
+			> start revServer 58000 a 1
+			> start namedTrack 50001 localhost 58000 manaritu:rikka
+			> start namedTrack 50002 localhost 58000 manaritu:mana.R
+
+		2. Heart で以下のコマンドを実行します。
+
+			> start revClient Diamond 50002 localhost 5800
+
+			または
+
+			> start revClient 192.168.111.101 50002 localhost 5800
+
+		3. Diamond -> Heart:5800 の代わりに Diamond -> localhost:50001 に接続する。

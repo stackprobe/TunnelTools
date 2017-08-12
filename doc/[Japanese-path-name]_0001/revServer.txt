@@ -1,0 +1,48 @@
+----
+■コマンドライン
+
+	revServer.exe RECV-PORT FWD-HOST FWD-PORT /S
+
+		/S ... このオプションを指定すると既に起動している revServer.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
+
+	revServer.exe RECV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX]
+
+		FWD-HOST    ... 不使用
+		FWD-PORT    ... 不使用
+		CONNECT-MAX ... 最大接続数, 省略時は 1000
+
+----
+■トラック名
+
+	NAME
+	NAME + ":" + POLE
+	NAME + ":" + POLE + ".R"
+
+	同じ NAME で POLE が異なる接続同士を紐付ける。
+	同じ NAME で POLE が "default" の接続同士も紐付ける。
+	POLE を省略した場合 "default" を使用する。
+	POLE の後ろが ".R" である場合、紐付けした直後に接続元へ 'C' を送る。
+
+	例えば 60001 と 60002 を紐付けたい場合は ...
+
+		revServer.exe 50000 a 1
+		namedTrack.exe 60001 localhost 50000 cure:heart
+		namedTrack.exe 60002 localhost 50000 cure:diamond
+
+	単独のポート(60000)で紐付けたい場合は ...
+
+		revServer.exe 50000 a 1
+		namedTrack.exe 60000 localhost 50000 precure
+
+	revClient.exe と紐付ける場合、接続したことを返さなければならないので POLE の最後に ".R" が必要です。
+
+		hostA:60001 -> hostC:55555
+
+		[hostA]
+			revServer.exe 50000 a 1
+			namedTrack.exe 60001 localhost 50000 cure:heart
+			namedTrack.exe 60002 localhost 50000 cure:diamond.R
+
+		[hostB]
+			revClient.exe hostA 60002 hostC 55555

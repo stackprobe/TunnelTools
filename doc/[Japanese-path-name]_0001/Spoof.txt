@@ -1,0 +1,18 @@
+----
+■コマンドライン
+
+	Spoof.exe RECV-PORT FWD-HOST FWD-PORT /S
+
+		/S ... このオプションを指定すると既に起動している Spoof.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
+
+	Spoof.exe RECV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX] [/T TIMEOUT] [/SF SEND-PTNTBL-FILE] [/RF RECV-PTNTBL-FILE]
+
+		CONNECT-MAX ... 最大接続数, 省略時は 1000
+		TIMEOUT ... 置き換えパターンの途中で通信が止まったときのタイムアウト [秒], 0 == 無効, 省略時は 2 秒
+
+		SEND-PTNTBL-PATH, RECV-PTNTBL-PATH ...
+
+			置き換えパターンを記述したバイナリファイル名のリストを記述したファイル名を指定します。
+			ディレクトリを指定した場合は、その配下のファイルをパス名でソートしたものをリストと見なします。
+			リストの長さは偶数で、奇数番目が置き換え前のパターン、その直後の偶数番目が置き換え後のパターンになるようにします。
