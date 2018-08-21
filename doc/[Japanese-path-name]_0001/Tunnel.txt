@@ -6,14 +6,15 @@
 		/S ... このオプションを指定すると既に起動している Tunnel.exe を安全に停止できます。
 		       停止するまで時間が掛かることがあります。
 
-	Tunnel.exe RECV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX] [/F LOG-FILE | /A LOG-FILE] [/U | /D]
+	Tunnel.exe RECV-PORT FWD-HOST FWD-PORT [//CT CONNECT-TIMEOUT] [/C CONNECT-MAX] [/F LOG-FILE | /A LOG-FILE] [/U | /D]
 
-		RECV-PORT   ... 待受ポート番号
-		FWD-HOST    ... 転送先ホスト名
-		FWD-PORT    ... 転送先ポート番号
-		CONNECT-MAX ... 最大同時接続数 (省略時：1000)
-		/F          ... 新規 or 上書き
-		/A          ... 新規 or 追記
-		LOG-FILE    ... ログ出力ファイル
-		/U          ... アップロードのみ
-		/D          ... ダウンロードのみ
+		CONNECT-TIMEOUT ... TCP接続タイムアウト, [秒] 省略時は 20, 指定できる範囲は 1 ～ 3600
+		RECV-PORT       ... 待受ポート番号
+		FWD-HOST        ... 転送先ホスト名
+		FWD-PORT        ... 転送先ポート番号
+		CONNECT-MAX     ... 最大同時接続数 (省略時：1000)
+		/F              ... 新規 or 上書き
+		/A              ... 新規 or 追記
+		LOG-FILE        ... ログ出力ファイル
+		/U              ... アップロードのみ
+		/D              ... ダウンロードのみ

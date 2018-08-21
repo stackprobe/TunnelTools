@@ -6,11 +6,13 @@
 		/S ... このオプションを指定すると既に起動している httpMonitor.exe を安全に停止できます。
 		       停止するまで時間が掛かることがあります。
 
-	httpMonitor.exe RECV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX] [/SX SIZE-MAX] OUT-DIR
+	httpMonitor.exe RECV-PORT FWD-HOST FWD-PORT [//CT CONNECT-TIMEOUT]
+	                                            [/C CONNECT-MAX] [/SX SIZE-MAX] OUT-DIR
 
-		CONNECT-MAX ... 最大接続数, 省略時は 1000
-		SIZE-MAX    ... リクエスト・レスポンスのサイズの上限, 単位はバイト, 省略時は 270 メガバイト
-		OUT-DIR     ... 出力先ディレクトリ
+		CONNECT-TIMEOUT  ... TCP接続タイムアウト, [秒] 省略時は 20, 指定できる範囲は 1 ～ 3600
+		CONNECT-MAX      ... 最大接続数, 省略時は 1000
+		SIZE-MAX         ... リクエスト・レスポンスのサイズの上限, 単位はバイト, 省略時は 270 メガバイト
+		OUT-DIR          ... 出力先ディレクトリ
 
 	出力先ディレクトリは、存在するディレクトリであること。
 

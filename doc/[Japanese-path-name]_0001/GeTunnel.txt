@@ -6,10 +6,12 @@
 		/S ... このオプションを指定すると既に起動している GeTunnel.exe を安全に停止できます。
 		       停止するまで時間が掛かることがあります。
 
-	GeTunnel.exe RECV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX] [/P PROXY-HOST PROXY-PORT] [/R]
+	GeTunnel.exe RECV-PORT FWD-HOST FWD-PORT [//CT CONNECT-TIMEOUT]
+	                                         [/C CONNECT-MAX] [/P PROXY-HOST PROXY-PORT] [/R]
 	                                         [/E EMBED-MODE] [/BS BUFF-FULL] [/EF ERROR-PAGE-FILE]
 	                                         [/XRH EXTRA-REQ-RES-HEADER-LINES-FILE]
 
+		CONNECT-TIMEOUT ... TCP接続タイムアウト, [秒] 省略時は 20, 指定できる範囲は 1 ～ 3600
 		CONNECT-MAX     ... 最大接続数, 省略時は 50
 		PROXY-HOST      ... プロキシサーバー
 		PROXY-PORT      ... プロキシサーバーのポート番号

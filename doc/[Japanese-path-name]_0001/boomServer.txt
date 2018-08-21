@@ -6,9 +6,11 @@
 		/S ... このオプションを指定すると既に起動している boomServer.exe を安全に停止できます。
 		       停止するまで時間が掛かることがあります。
 
-	boomServer.exe RECV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX] [/SS SEND-SIZE-MAX] [/RS RECV-SIZE-MAX]
+	boomServer.exe RECV-PORT FWD-HOST FWD-PORT [//CT CONNECT-TIMEOUT]
+	                                           [/C CONNECT-MAX] [/SS SEND-SIZE-MAX] [/RS RECV-SIZE-MAX]
 	                                           [/T SOCK-TIMEOUT] [/NCT NO-CONNECT-TIMEOUT]
 
+		CONNECT-TIMEOUT    ... TCP接続タイムアウト, [秒] 省略時は 20, 指定できる範囲は 1 ～ 3600
 		CONNECT-MAX        ... 最大同時接続数, 省略時は 50
 		SEND-SIZE-MAX      ... 最大送信データサイズ, [バイト] 最小21
 		RECV-SIZE-MAX      ... 最大受信データサイズ, [バイト] 最小21

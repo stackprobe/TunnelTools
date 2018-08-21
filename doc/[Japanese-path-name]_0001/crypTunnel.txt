@@ -6,8 +6,10 @@
 		/S ... このオプションを指定すると既に起動している crypTunnel.exe を安全に停止できます。
 		       停止するまで時間が掛かることがあります。
 
-	crypTunnel.exe RECV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX] [/R] [/KW KEY-WIDTH] [/0] [/BSL BLOCK-SIZE-LIMIT] [/T] KEY-BUNDLE-FILE
+	crypTunnel.exe RECV-PORT FWD-HOST FWD-PORT [//CT CONNECT-TIMEOUT]
+	                                           [/C CONNECT-MAX] [/R] [/KW KEY-WIDTH] [/0] [/BSL BLOCK-SIZE-LIMIT] [/T] KEY-BUNDLE-FILE
 
+		CONNECT-TIMEOUT  ... TCP接続タイムアウト, [秒] 省略時は 20, 指定できる範囲は 1 ～ 3600
 		RECV-PORT        ... 待ち受けポート番号
 		FWD-DOMAIN       ... 転送先ホスト名
 		FWD-PORT         ... 転送先ポート番号

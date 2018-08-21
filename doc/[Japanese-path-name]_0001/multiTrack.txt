@@ -6,13 +6,15 @@
 		/S ... このオプションを指定すると既に起動している multiTrack.exe を安全に停止できます。
 		       停止するまで時間が掛かることがあります。
 
-	multiTrack.exe RECV-PORT DEF-FWD-HOST DEF-FWD-PORT [/C CONNECT-MAX] [TRACK-NAME FWD-HOST FWD-PORT | /F FWD-FILE]...
+	multiTrack.exe RECV-PORT DEF-FWD-HOST DEF-FWD-PORT [//CT CONNECT-TIMEOUT]
+	                                                   [/C CONNECT-MAX] [TRACK-NAME FWD-HOST FWD-PORT | /F FWD-FILE]...
 
-		CONNECT-MAX ... 最大接続数, 省略時は 1000
-		TRACK-NAME  ... トラック名
-		FWD-HOST    ... 転送先ホスト名
-		FWD-PORT    ... 転送先ポート番号
-		FWD-FILE    ... 転送先リスト定義ファイル
+		CONNECT-TIMEOUT ... TCP接続タイムアウト, [秒] 省略時は 20, 指定できる範囲は 1 ～ 3600
+		CONNECT-MAX     ... 最大接続数, 省略時は 1000
+		TRACK-NAME      ... トラック名
+		FWD-HOST        ... 転送先ホスト名
+		FWD-PORT        ... 転送先ポート番号
+		FWD-FILE        ... 転送先リスト定義ファイル
 
 		★ DEF-FWD-HOST に NONE を指定すると、デフォルトの転送先は無効になります。
 
