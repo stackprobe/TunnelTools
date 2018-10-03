@@ -1,5 +1,5 @@
 IF NOT EXIST .\GitRelease.bat GOTO END
 CALL qq
-C:\Factory\SubTools\GitFactory.exe /ow . C:\home\GitHub\TunnelTools
+C:\Factory\SubTools\GitFactory.exe /ow . C:\huge\GitHub\TunnelTools
 rem CALL C:\var\go.bat
 :END
