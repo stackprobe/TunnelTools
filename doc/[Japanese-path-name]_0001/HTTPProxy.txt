@@ -6,8 +6,8 @@
 		/S ... このオプションを指定すると既に起動している HTTPProxy.exe を安全に停止できます。
 		       停止するまで時間が掛かることがあります。
 
-	HTTPProxy.exe RECV-PORT FWD-HOST FWD-PORT [//CT CONNECT-TIMEOUT]
-	                                          [/C CONNECT-MAX] [/T SOCK-TIMEOUT] [/MT MESSAGE-TIMEOUT]
+	HTTPProxy.exe RECV-PORT FWD-HOST FWD-PORT [/C CONNECT-MAX] [/T SOCK-TIMEOUT] [/MT MESSAGE-TIMEOUT]
+	                                          [/FBT U-FIRST-BYTE-TIMEOUT] [/FBT- D-FIRST-BYTE-TIMEOUT]
 	                                          [/NDT U-NO-DATA-TIMEOUT] [/NDT- D-NO-DATA-TIMEOUT]
 	                                          [/M MESSAGE-MAX] [/X] [/D] [/-D] [/+C]
 	                                          [/IP OK-IP-PFX]... [/-IP NG-IP-PFX]...
@@ -15,16 +15,17 @@
 	                                          [/HR- H-KEY H-VAL]... [/HK- H-KEY]...
 	                                          [/HR+ H-KEY H-VAL]... [/HK+ H-KEY]...
 	                                          [/F FILTER-COMMAND]
-	                                          [/F+ FILTER-COMMAND]
 	                                          [/F- FILTER-COMMAND]
+	                                          [/F+ FILTER-COMMAND]
 
-		CONNECT-TIMEOUT   ... TCP接続タイムアウト, [秒] 省略時は 20, 指定できる範囲は 1 ～ 3600
-		CONNECT-MAX       ... 最大接続数, 省略時 100
-		SOCK-TIMEOUT      ... 通信タイムアウト [秒] 0 == 無制限, 省略時 10 日
-		U-NO-DATA-TIMEOUT ... 上り無通信タイムアウト [秒] 0 == 無制限, 省略時 3 分
-		D-NO-DATA-TIMEOUT ... 下り無通信タイムアウト [秒] 0 == 無制限, 省略時 5 分
-		MESSAGE-TIMEOUT   ... 1回(1つ)のメッセージの送信・受信タイムアウト [秒] 0 == 無制限, 省略時 10 時間
-		MESSAGE-MAX       ... メッセージバッファの最大合計サイズ, 省略時は 270 MB
+		CONNECT-MAX          ... 最大接続数, 省略時 100
+		SOCK-TIMEOUT         ... 通信タイムアウト [秒] 0 == 無制限, 省略時 10 日
+		U-FIRST-BYTE-TIMEOUT ... 上り最初の１バイトのタイムアウト [秒] 0 == 無制限, 省略時 3 秒
+		D-FIRST-BYTE-TIMEOUT ... 下り最初の１バイトのタイムアウト [秒] 0 == 無制限, 省略時 5 秒
+		U-NO-DATA-TIMEOUT    ... 上り無通信タイムアウト [秒] 0 == 無制限, 省略時 3 分
+		D-NO-DATA-TIMEOUT    ... 下り無通信タイムアウト [秒] 0 == 無制限, 省略時 5 分
+		MESSAGE-TIMEOUT      ... １回(１つ)のメッセージの送信・受信タイムアウト [秒] 0 == 無制限, 省略時 10 時間
+		MESSAGE-MAX          ... メッセージバッファの最大合計サイズ, 省略時は 270 MB
 		/X  ... Hostタグを見て転送先を変更する。
 		/D  ... URLにスキーム・ドメインを挿入する。
 		/-D ... URLからスキーム・ドメインを除去する。
