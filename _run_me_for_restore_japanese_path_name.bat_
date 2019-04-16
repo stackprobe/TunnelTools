@@ -1,10 +1,10 @@
 REN doc\sample\0002\[Japanese-path-name]_0002 上り置換
 REN doc\sample\0002\[Japanese-path-name]_0001 下り置換
 REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0009.txt 09_パケットキャプチャ.txt
-REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0008.txt 08_通信データの暗号化・復号（暗号通信）.txt
-REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0007.txt 07_ＨＴＴＰプロキシトンネル（ＨＴＴＰプロキシ回避）.txt
-REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0006.txt 06_ＨＴＴＰ通信データの表示・ファイルに保存.txt
-REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0005.txt 05_ＨＴＴＰプロキシサーバー.txt
+REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0008.txt 08_通信データの暗号化・復号(暗号通信).txt
+REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0007.txt 07_HTTPプロキシトンネル(HTTPプロキシ回避).txt
+REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0006.txt 06_HTTP通信データの表示・ファイルに保存.txt
+REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0005.txt 05_HTTPプロキシサーバー.txt
 REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0004.txt 04_複数のポートを１つにまとめる.txt
 REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0003.txt 03_ルータの外側から内側のネットワークに接続.txt
 REN doc\[Japanese-path-name]_0002\[Japanese-path-name]_0002.txt 02_通信データの置き換え.txt
