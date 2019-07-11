@@ -1,22 +1,22 @@
 ----
-���R�}���h���C��
+■コマンドライン
 
 	boomClient.exe RECV-PORT FWD-HOST FWD-PORT /S
 
-		/S ... ���̃I�v�V�������w�肷��Ɗ��ɋN�����Ă��� boomClient.exe �����S�ɒ�~�ł��܂��B
-		       ��~����܂Ŏ��Ԃ��|���邱�Ƃ�����܂��B
+		/S ... このオプションを指定すると既に起動している boomClient.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
 
 	boomClient.exe RECV-PORT FWD-HOST FWD-PORT [//CT CONNECT-TIMEOUT]
 	                                           [/C CONNECT-MAX] [/SS SEND-SIZE-MAX]
 	                                           [/RS RECV-SIZE-MAX] [/T SOCK-TIMEOUT]
 	                                           [/NCT NO-CONNECT-TIMEOUT] [/B]
 
-		CONNECT-TIMEOUT    ... TCP�ڑ��^�C���A�E�g, [�b] �ȗ����� 20, �w��ł���͈͂� 1 �` 3600
-		CONNECT-MAX        ... �ő哯���ڑ���, �ȗ����� 1000
-		SEND-SIZE-MAX      ... �ő呗�M�f�[�^�T�C�Y, [�o�C�g] �ŏ�21
-		RECV-SIZE-MAX      ... �ő��M�f�[�^�T�C�Y, [�o�C�g] �ŏ�21
-		SOCK-TIMEOUT       ... �P��̑���M�̃^�C���A�E�g, [�b]
-		NO-CONNECT-TIMEOUT ... ���ڑ��^�C���A�E�g, [�b]
-		/B                 ... �T�[�o�[�ւ̓����ڑ����ő�P�ɂ���, �ȗ����� CONNECT-MAX �Ɉˑ�
+		CONNECT-TIMEOUT    ... TCP接続タイムアウト, [秒] 省略時は 20, 指定できる範囲は 1 ～ 3600
+		CONNECT-MAX        ... 最大同時接続数, 省略時は 1000
+		SEND-SIZE-MAX      ... 最大送信データサイズ, [バイト] 最小21
+		RECV-SIZE-MAX      ... 最大受信データサイズ, [バイト] 最小21
+		SOCK-TIMEOUT       ... １回の送受信のタイムアウト, [秒]
+		NO-CONNECT-TIMEOUT ... 無接続タイムアウト, [秒]
+		/B                 ... サーバーへの同時接続を最大１にする, 省略時は CONNECT-MAX に依存
 
-		���ڑ����Ƃ̃^�C���A�E�g�͖����B
+		★接続元とのタイムアウトは無い。

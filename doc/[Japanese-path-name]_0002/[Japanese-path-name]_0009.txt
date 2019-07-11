@@ -1,19 +1,19 @@
 ----
-¡Žg—p—á
+â– ä½¿ç”¨ä¾‹
 
-ŠJŽn
+é–‹å§‹
 
-	ˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ðŽÀs‚µ‚Ü‚·B
+	ä»¥ä¸‹ã®ã‚³ãƒžãƒ³ãƒ‰ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 
 		> PackMon
 
-’âŽ~
+åœæ­¢
 
-	ƒGƒXƒP[ƒvƒL[‰Ÿ‰º–”‚ÍˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ðŽÀs‚µ‚Ü‚·B
+	ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã‚­ãƒ¼æŠ¼ä¸‹åˆã¯ä»¥ä¸‹ã®ã‚³ãƒžãƒ³ãƒ‰ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 
 		> PackMon /S
 
 ----
-¡ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“
+â– ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³
 
-	> PackMon [/NIC ŠÄŽ‹‚·‚éƒlƒbƒgƒ[ƒNƒJ[ƒh‚ÌIPƒAƒhƒŒƒX] [/F o—Íƒtƒ@ƒCƒ‹]
+	> PackMon [/NIC ç›£è¦–ã™ã‚‹ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ã‚«ãƒ¼ãƒ‰ã®IPã‚¢ãƒ‰ãƒ¬ã‚¹] [/F å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«]

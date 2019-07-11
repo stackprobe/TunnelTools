@@ -1,34 +1,34 @@
 ----
-���R�}���h���C��
+■コマンドライン
 
 	GeTunnel.exe RECV-PORT FWD-HOST FWD-PORT /S
 
-		/S ... ���̃I�v�V�������w�肷��Ɗ��ɋN�����Ă��� GeTunnel.exe �����S�ɒ�~�ł��܂��B
-		       ��~����܂Ŏ��Ԃ��|���邱�Ƃ�����܂��B
+		/S ... このオプションを指定すると既に起動している GeTunnel.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
 
 	GeTunnel.exe RECV-PORT FWD-HOST FWD-PORT [//CT CONNECT-TIMEOUT]
 	                                         [/C CONNECT-MAX] [/P PROXY-HOST PROXY-PORT] [/R]
 	                                         [/E EMBED-MODE] [/BS BUFF-FULL] [/EF ERROR-PAGE-FILE]
 	                                         [/XRH EXTRA-REQ-RES-HEADER-LINES-FILE]
 
-		CONNECT-TIMEOUT ... TCP�ڑ��^�C���A�E�g, [�b] �ȗ����� 20, �w��ł���͈͂� 1 �` 3600
-		CONNECT-MAX     ... �ő�ڑ���, �ȗ����� 50
-		PROXY-HOST      ... �v���L�V�T�[�o�[
-		PROXY-PORT      ... �v���L�V�T�[�o�[�̃|�[�g�ԍ�
-		/R              ... �T�[�o�[���[�h
-		EMBED-MODE      ... ���ߍ��݃��[�h
-		BUFF-FULL       ... ����M�o�b�t�@�̍ő�T�C�Y�B
-		                    ���N�G�X�g�E���X�|���X�̍ő�T�C�Y��菭���傫�߂ɂ��邱�ƁB
-		ERROR-PAGE-FILE ... �G���[�����t�@�C��
-		EXTRA-REQ-RES-HEADER-LINES-FILE ... �g���w�b�_�[�s���X�g�t�@�C��
+		CONNECT-TIMEOUT ... TCP接続タイムアウト, [秒] 省略時は 20, 指定できる範囲は 1 ～ 3600
+		CONNECT-MAX     ... 最大接続数, 省略時は 50
+		PROXY-HOST      ... プロキシサーバー
+		PROXY-PORT      ... プロキシサーバーのポート番号
+		/R              ... サーバーモード
+		EMBED-MODE      ... 埋め込みモード
+		BUFF-FULL       ... 送受信バッファの最大サイズ。
+		                    リクエスト・レスポンスの最大サイズより少し大きめにすること。
+		ERROR-PAGE-FILE ... エラー応答ファイル
+		EXTRA-REQ-RES-HEADER-LINES-FILE ... 拡張ヘッダー行リストファイル
 
-		���^�C���A�E�g�͖����B
+		★タイムアウトは無い。
 
 ----
-�����ߍ��݃��[�h
+■埋め込みモード
 
-	���ۂ̒ʐM�f�[�^��HTTP���N�G�X�g�̉����ɖ��ߍ��ނ��w�肵�܂��B
+	実際の通信データをHTTPリクエストの何処に埋め込むか指定します。
 
-	1 ... HTTP���N�G�X�g�̃N�G���A����̓{�f�B�i�f�t�H���g�j
-	2 ... �N�b�L�[
-	3 ... �w�b�_�[�t�B�[���h����ɍ���Ă�����
+	1 ... HTTPリクエストのクエリ、下りはボディ（デフォルト）
+	2 ... クッキー
+	3 ... ヘッダーフィールド勝手に作ってそこに

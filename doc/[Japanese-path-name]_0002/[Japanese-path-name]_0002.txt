@@ -1,15 +1,15 @@
 ----
 
-�|�[�g�t�H���[�f�B���O������łɒʐM�f�[�^�̒u���������s���܂��B
+ポートフォワーディングするついでに通信データの置き換えを行います。
 
 ----
-���g�p��
+■使用例
 
-�ȉ��̂Ƃ��� Spoof.exe ���N�����܂��B
+以下のとおり Spoof.exe を起動します。
 
-	> Spoof 80 stackprobe.dip.jp 58946 /sf sample\0002\���u�� /rf sample\0002\����u��
+	> Spoof 80 stackprobe.dip.jp 58946 /sf sample\0002\上り置換 /rf sample\0002\下り置換
 
 
-���̏�ԂŃu���E�U���� http://localhost/ �ɃA�N�Z�X����� http://stackprobe.dip.jp/ �̓��e���\������܂��B
-�܂��A�y�[�W���́u�ł��B�v���u�f�[�X�v�ɒu��������Ă��܂��B
+この状態でブラウザから http://localhost/ にアクセスすると http://stackprobe.dip.jp/ の内容が表示されます。
+また、ページ中の「です。」が「デース」に置き換わっています。
 

@@ -1,4 +1,4 @@
-¡ˆÈ‰º‚ÌŠO•”ƒtƒ@ƒCƒ‹‚ğƒŠƒŠ[ƒX•¨‚ÉŠÜ‚ß‚éB
+â– ä»¥ä¸‹ã®å¤–éƒ¨ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒªãƒªãƒ¼ã‚¹ç‰©ã«å«ã‚ã‚‹ã€‚
 
 	C:\Factory\Labo\Socket\tunnel\boomClient.exe
 	C:\Factory\Labo\Socket\tunnel\boomServer.exe

@@ -1,67 +1,67 @@
 ----
 
-�|�[�g�t�H���[�f�B���O������łɒʐM�f�[�^��\���E�ۑ����܂��B
+ポートフォワーディングするついでに通信データを表示・保存します。
 
 ----
-���g�p��
+■使用例
 
-�l�b�g���[�N�\��
+ネットワーク構成
 
-	�z�X�g��   IP                Listen Port
+	ホスト名   IP                Listen Port
 	----------------------------------------
 	Bloom      192.168.123.101   none
 	Egret      192.168.123.102   8080
 
-Bloom -> Egret:8080 �̐ڑ������j�^����ɂ͈ȉ��̂悤�ɂ��܂��B
+Bloom -> Egret:8080 の接続をモニタするには以下のようにします。
 
-	a. Bloom �Ń��j�^����B
+	a. Bloom でモニタする。
 
-		���ȉ��̂悤�ɒ��p���܂��B
+		★以下のように中継します。
 
 			Bloom -> Bloom:60001 -> Egret:8080
 
-		1. Bloom �ňȉ��̃R�}���h�����s����B
+		1. Bloom で以下のコマンドを実行する。
 
 			> start Tunnel 60001 Egret 8080
 
-			�܂���
+			または
 
 			> start Tunnel 60001 192.168.123.102 8080
 
-		2. Bloom -> Egret:8080 �̑���� Bloom -> localhost:60001 �ɐڑ�����B
+		2. Bloom -> Egret:8080 の代わりに Bloom -> localhost:60001 に接続する。
 
-	b. Egret �Ń��j�^����B
+	b. Egret でモニタする。
 
-		���ȉ��̂悤�ɒ��p���܂��B
+		★以下のように中継します。
 
 			Bloom -> Egret:60001 -> Egret:8080
 
-		1. Egret �ňȉ��̃R�}���h�����s����B
+		1. Egret で以下のコマンドを実行する。
 
 			> start Tunnel 60001 localhost 8080
 
-		2. Bloom -> Egret:8080 �̑���� Bloom -> Egret:60001 �ɐڑ�����B
+		2. Bloom -> Egret:8080 の代わりに Bloom -> Egret:60001 に接続する。
 
-���j�^������e���t�@�C���ɕۑ�����ɂ͈ȉ��̂悤�ɂ��܂��B
+モニタする内容をファイルに保存するには以下のようにします。
 
-	a. ���j�^���Ă�����e�� a.txt �ɕۑ�����B
+	a. モニタしている内容を a.txt に保存する。
 
 		> start Tunnel 60001 Egret 8080 /f a.txt
 
-	b. ���j�^���Ă�����e�� C:\tmp\bbb.log �ɒǋL����B
+	b. モニタしている内容を C:\tmp\bbb.log に追記する。
 
 		> start Tunnel 60001 localhost 8080 /a C:\tmp\bbb.log
 
 
-���z�X�g��, IP�A�h���X, �|�[�g�ԍ��͎��ۂ̊��ɂ��킹�ĕύX���ĉ������B
+★ホスト名, IPアドレス, ポート番号は実際の環境にあわせて変更して下さい。
 
 
 ----
-����萶�ɋ߂��ʐM�f�[�^���擾����ɂ�
+■より生に近い通信データを取得するには
 
-	Tunnel2.exe ���g�p���ĉ������B
+	Tunnel2.exe を使用して下さい。
 
-	T2DivId.exe �ɂ���� TCP �Z�b�V�������̃f�[�^�ɁA
-	T2DiHTTP.exe �ɂ���� HTTP ���N�G�X�g�E���X�|���X���̃f�[�^�ɕ����o���܂��B
-	T2DiHDiv.exe �ɂ���čX�Ƀw�b�_�ƃR���e���c�ɕ����o���܂��B
+	T2DivId.exe によって TCP セッション毎のデータに、
+	T2DiHTTP.exe によって HTTP リクエスト・レスポンス毎のデータに分解出来ます。
+	T2DiHDiv.exe によって更にヘッダとコンテンツに分解出来ます。
 

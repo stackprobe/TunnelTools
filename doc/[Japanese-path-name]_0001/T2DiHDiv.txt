@@ -1,14 +1,14 @@
 ----
-¡ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“
+â– ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³
 
-	T2DiHDiv.exe “ü—ÍƒfƒBƒŒƒNƒgƒŠ
+	T2DiHDiv.exe å…¥åŠ›ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
-		“ü—ÍƒfƒBƒŒƒNƒgƒŠ ... T2DiHTTP.exe ‚Ìo—ÍƒfƒBƒŒƒNƒgƒŠ‚ðŽw’è‚µ‚Ä‰º‚³‚¢B
+		å…¥åŠ›ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª ... T2DiHTTP.exe ã®å‡ºåŠ›ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’æŒ‡å®šã—ã¦ä¸‹ã•ã„ã€‚
 
 ----
-¡o—Íƒtƒ@ƒCƒ‹–¼
+â– å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«å
 
-	“ü—Íƒtƒ@ƒCƒ‹ƒm[ƒh_ƒp[ƒg.txt
+	å…¥åŠ›ãƒ•ã‚¡ã‚¤ãƒ«ãƒŽãƒ¼ãƒ‰_ãƒ‘ãƒ¼ãƒˆ.txt
 
-		ƒp[ƒg ... "1-Head", "2-Body" ‚Ì‰½‚ê‚©B
+		ãƒ‘ãƒ¼ãƒˆ ... "1-Head", "2-Body" ã®ä½•ã‚Œã‹ã€‚
 

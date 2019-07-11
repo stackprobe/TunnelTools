@@ -1,25 +1,25 @@
 ----
-¡ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“
+â– ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³
 
-	T2DivId.exe “ü—Íƒtƒ@ƒCƒ‹
+	T2DivId.exe å…¥åŠ›ãƒ•ã‚¡ã‚¤ãƒ«
 
-		“ü—Íƒtƒ@ƒCƒ‹ ... Tunnel2.exe ‚ÌƒƒOo—Íƒtƒ@ƒCƒ‹‚ðŽw’è‚µ‚Ä‰º‚³‚¢B
-
-----
-¡o—Íƒtƒ@ƒCƒ‹–¼
-
-	Ú‘±“úŽž-Ø’f“úŽž-ID.csv
-
-		Ú‘±“úŽž ... TCPƒZƒbƒVƒ‡ƒ“‚ðŠm—§‚µ‚½“úŽž
-		Ø’f“úŽž ... TCPƒZƒbƒVƒ‡ƒ“‚ðØ’f‚µ‚½“úŽž
-		ID       ... TCPƒZƒbƒVƒ‡ƒ“–ˆ‚Ì 1000 ‚©‚çŽn‚Ü‚é˜A”Ô
+		å…¥åŠ›ãƒ•ã‚¡ã‚¤ãƒ« ... Tunnel2.exe ã®ãƒ­ã‚°å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æŒ‡å®šã—ã¦ä¸‹ã•ã„ã€‚
 
 ----
-¡o—Íƒtƒ@ƒCƒ‹EƒtƒH[ƒ}ƒbƒg
+â– å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«å
 
-	Tunnel2.txt ‚Æ“¯‚¶B
+	æŽ¥ç¶šæ—¥æ™‚-åˆ‡æ–­æ—¥æ™‚-ID.csv
+
+		æŽ¥ç¶šæ—¥æ™‚ ... TCPã‚»ãƒƒã‚·ãƒ§ãƒ³ã‚’ç¢ºç«‹ã—ãŸæ—¥æ™‚
+		åˆ‡æ–­æ—¥æ™‚ ... TCPã‚»ãƒƒã‚·ãƒ§ãƒ³ã‚’åˆ‡æ–­ã—ãŸæ—¥æ™‚
+		ID       ... TCPã‚»ãƒƒã‚·ãƒ§ãƒ³æ¯Žã® 1000 ã‹ã‚‰å§‹ã¾ã‚‹é€£ç•ª
 
 ----
-¡“úŽžƒtƒH[ƒ}ƒbƒg
+â– å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«ãƒ»ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆ
 
-	Tunnel2.txt ‚Æ“¯‚¶B
+	Tunnel2.txt ã¨åŒã˜ã€‚
+
+----
+â– æ—¥æ™‚ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆ
+
+	Tunnel2.txt ã¨åŒã˜ã€‚

@@ -1,44 +1,44 @@
 ----
-¡Žg—p—á(1)
+â– ä½¿ç”¨ä¾‹(1)
 
-ˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ðŽÀs‚µ‚Ü‚·B
+ä»¥ä¸‹ã®ã‚³ãƒžãƒ³ãƒ‰ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 
 	> SmplProxy
 
-ƒuƒ‰ƒEƒU‚ÌƒvƒƒLƒVƒT[ƒo[‚ð localhost:8080 ‚É•ÏX‚µ‚Ä‰º‚³‚¢B
-ƒuƒ‰ƒEƒU‚ðŠJ‚­‚ÆAHTTPProxy.exe ‚ðŒo—R‚µ‚ÄƒCƒ“ƒ^[ƒlƒbƒg‚ÉƒAƒNƒZƒX‚µ‚Ä‚¢‚é‚Í‚¸‚Å‚·B
+ãƒ–ãƒ©ã‚¦ã‚¶ã®ãƒ—ãƒ­ã‚­ã‚·ã‚µãƒ¼ãƒãƒ¼ã‚’ localhost:8080 ã«å¤‰æ›´ã—ã¦ä¸‹ã•ã„ã€‚
+ãƒ–ãƒ©ã‚¦ã‚¶ã‚’é–‹ãã¨ã€HTTPProxy.exe ã‚’çµŒç”±ã—ã¦ã‚¤ãƒ³ã‚¿ãƒ¼ãƒãƒƒãƒˆã«ã‚¢ã‚¯ã‚»ã‚¹ã—ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚
 
 ----
-¡Žg—p—á(2) -- ƒ_ƒEƒ“ƒ[ƒh‰æ‘œ‚ð·‚µ‘Ö‚¦‚éHTTPƒvƒƒLƒV
+â– ä½¿ç”¨ä¾‹(2) -- ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ç”»åƒã‚’å·®ã—æ›¿ãˆã‚‹HTTPãƒ—ãƒ­ã‚­ã‚·
 
-ˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ðŽÀs‚µ‚Ü‚·B
+ä»¥ä¸‹ã®ã‚³ãƒžãƒ³ãƒ‰ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 
 	> SmplProxy_FaceFilter
 
-ƒuƒ‰ƒEƒU‚ÌƒvƒƒLƒVƒT[ƒo[‚ð localhost:8080 ‚É•ÏX‚µ‚Ä‰º‚³‚¢B
-ƒuƒ‰ƒEƒU‚ðŠJ‚­‚ÆAHTTP‚Åƒ_ƒEƒ“ƒ[ƒh‚µ‚½‰æ‘œ‚ª sample\0005\Face.png ‚É·‚µ‘Ö‚í‚Á‚Ä‚¢‚é‚Í‚¸‚Å‚·B
+ãƒ–ãƒ©ã‚¦ã‚¶ã®ãƒ—ãƒ­ã‚­ã‚·ã‚µãƒ¼ãƒãƒ¼ã‚’ localhost:8080 ã«å¤‰æ›´ã—ã¦ä¸‹ã•ã„ã€‚
+ãƒ–ãƒ©ã‚¦ã‚¶ã‚’é–‹ãã¨ã€HTTPã§ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ãŸç”»åƒãŒ sample\0005\Face.png ã«å·®ã—æ›¿ã‚ã£ã¦ã„ã‚‹ã¯ãšã§ã™ã€‚
 
 ----
-¡Žg—p—á(3) -- ƒ_ƒEƒ“ƒ[ƒh‚µ‚½ƒRƒ“ƒeƒ“ƒc‚ðƒtƒ@ƒCƒ‹‚É•Û‘¶‚·‚éHTTPƒvƒƒLƒV
+â– ä½¿ç”¨ä¾‹(3) -- ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ãŸã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’ãƒ•ã‚¡ã‚¤ãƒ«ã«ä¿å­˜ã™ã‚‹HTTPãƒ—ãƒ­ã‚­ã‚·
 
-ˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ðŽÀs‚µ‚Ü‚·B
+ä»¥ä¸‹ã®ã‚³ãƒžãƒ³ãƒ‰ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 
 	> SmplProxy_SmplSaver
 
-ƒuƒ‰ƒEƒU‚ÌƒvƒƒLƒVƒT[ƒo[‚ð localhost:8080 ‚É•ÏX‚µ‚Ä‰º‚³‚¢B
-ƒuƒ‰ƒEƒU‚ðŠJ‚­‚ÆAHTTP‚Åƒ_ƒEƒ“ƒ[ƒh‚µ‚½ƒRƒ“ƒeƒ“ƒc‚ª "ƒ_ƒEƒ“ƒ[ƒhEƒRƒ“ƒeƒ“ƒc" ‚É•Û‘¶‚³‚ê‚é‚Í‚¸‚Å‚·B
+ãƒ–ãƒ©ã‚¦ã‚¶ã®ãƒ—ãƒ­ã‚­ã‚·ã‚µãƒ¼ãƒãƒ¼ã‚’ localhost:8080 ã«å¤‰æ›´ã—ã¦ä¸‹ã•ã„ã€‚
+ãƒ–ãƒ©ã‚¦ã‚¶ã‚’é–‹ãã¨ã€HTTPã§ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã—ãŸã‚³ãƒ³ãƒ†ãƒ³ãƒ„ãŒ "ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒ»ã‚³ãƒ³ãƒ†ãƒ³ãƒ„" ã«ä¿å­˜ã•ã‚Œã‚‹ã¯ãšã§ã™ã€‚
 
-	šƒJƒŒƒ“ƒgƒfƒBƒŒƒNƒgƒŠ‚É "ƒ_ƒEƒ“ƒ[ƒhEƒRƒ“ƒeƒ“ƒc" ‚Æ‚¢‚¤ƒfƒBƒŒƒNƒgƒŠ‚ª–³‚¯‚ê‚Îì¬‚µ‚Ü‚·B
-
-----
-¡ƒ|[ƒg”Ô†
-
-	ƒ|[ƒg”Ô†‚Í 8080 ‚ðŽg—p‚µ‚Ü‚·B
-	ƒ|[ƒg”Ô†‚ð•ÏX‚·‚é‚É‚Í SmplProxy.bat ‚Ì HTTPProxy ƒRƒ}ƒ“ƒh‚Ì‘æ‚Pˆø”‚ð•ÏX‚µ‚Ä‰º‚³‚¢B
+	â˜…ã‚«ãƒ¬ãƒ³ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã« "ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ãƒ»ã‚³ãƒ³ãƒ†ãƒ³ãƒ„" ã¨ã„ã†ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãŒç„¡ã‘ã‚Œã°ä½œæˆã—ã¾ã™ã€‚
 
 ----
-¡§ŒÀ‚Æ‚¢‚¤‚©–â‘è“_
+â– ãƒãƒ¼ãƒˆç•ªå·
 
-	‘—ŽóMƒf[ƒ^iƒwƒbƒ_‚Æƒ{ƒfƒB‚Ì‘g‚Ý‡‚í‚¹j‚ÍAˆê’U‚·‚×‚ÄŽóM‚µ‚Ä‚©‚ç‘—M‚ðŠJŽn‚µ‚Ü‚·B
-	‚È‚Ì‚ÅA‚ ‚Ü‚è‘å‚«‚ÈiƒƒbƒZ[ƒWƒoƒbƒtƒ@‚ð•N”—‚·‚é‚æ‚¤‚Èj‘—ŽóMƒf[ƒ^‚Í‘—ŽóM‚Å‚«‚È‚©‚Á‚½‚èA
-	Žó‚¯‘¤‚ÌŽóMŠJŽn‚ª‘å•‚É’x‚ê‚éê‡‚ª‚ ‚è‚Ü‚·B
+	ãƒãƒ¼ãƒˆç•ªå·ã¯ 8080 ã‚’ä½¿ç”¨ã—ã¾ã™ã€‚
+	ãƒãƒ¼ãƒˆç•ªå·ã‚’å¤‰æ›´ã™ã‚‹ã«ã¯ SmplProxy.bat ã® HTTPProxy ã‚³ãƒžãƒ³ãƒ‰ã®ç¬¬ï¼‘å¼•æ•°ã‚’å¤‰æ›´ã—ã¦ä¸‹ã•ã„ã€‚
+
+----
+â– åˆ¶é™ã¨ã„ã†ã‹å•é¡Œç‚¹
+
+	é€å—ä¿¡ãƒ‡ãƒ¼ã‚¿ï¼ˆãƒ˜ãƒƒãƒ€ã¨ãƒœãƒ‡ã‚£ã®çµ„ã¿åˆã‚ã›ï¼‰ã¯ã€ä¸€æ—¦ã™ã¹ã¦å—ä¿¡ã—ã¦ã‹ã‚‰é€ä¿¡ã‚’é–‹å§‹ã—ã¾ã™ã€‚
+	ãªã®ã§ã€ã‚ã¾ã‚Šå¤§ããªï¼ˆãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãƒãƒƒãƒ•ã‚¡ã‚’é€¼è¿«ã™ã‚‹ã‚ˆã†ãªï¼‰é€å—ä¿¡ãƒ‡ãƒ¼ã‚¿ã¯é€å—ä¿¡ã§ããªã‹ã£ãŸã‚Šã€
+	å—ã‘å´ã®å—ä¿¡é–‹å§‹ãŒå¤§å¹…ã«é…ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚

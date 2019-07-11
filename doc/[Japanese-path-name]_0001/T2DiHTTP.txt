@@ -1,27 +1,27 @@
 ----
-¡ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“
+â– ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³
 
-	T2DiHTTP.exe “ü—ÍƒfƒBƒŒƒNƒgƒŠ
+	T2DiHTTP.exe å…¥åŠ›ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
 
-		“ü—ÍƒfƒBƒŒƒNƒgƒŠ ... T2DivId.exe ‚Ìo—ÍƒfƒBƒŒƒNƒgƒŠ‚ðŽw’è‚µ‚Ä‰º‚³‚¢B
-
-----
-¡o—Íƒtƒ@ƒCƒ‹–¼
-
-	ŠJŽn“úŽž-I—¹“úŽž-ID-NO-ƒfƒBƒŒƒNƒVƒ‡ƒ“.txt
-
-		Ú‘±“úŽž ... TCPƒZƒbƒVƒ‡ƒ“‚ðŠm—§‚µ‚½“úŽž
-		Ø’f“úŽž ... TCPƒZƒbƒVƒ‡ƒ“‚ðØ’f‚µ‚½“úŽž
-		ID       ... TCPƒZƒbƒVƒ‡ƒ“–ˆ‚Ì 1000 ‚©‚çŽn‚Ü‚é˜A”Ô
-		NO       ... TCPƒZƒbƒVƒ‡ƒ““à‚Å‰½”Ô–Ú‚ÌƒŠƒNƒGƒXƒgEƒŒƒXƒ|ƒ“ƒX‚Å‚ ‚é‚©‚ðŽ¦‚· 1000 ‚©‚çŽn‚Ü‚é˜A”Ô
-		•ûŒü     ... ‘—MiƒŠƒNƒGƒXƒgj‚Å‚ ‚ê‚Î "1-Send", ŽóMiƒŒƒXƒ|ƒ“ƒXj‚Å‚ ‚ê‚Î "2-Recv"
+		å…¥åŠ›ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª ... T2DivId.exe ã®å‡ºåŠ›ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’æŒ‡å®šã—ã¦ä¸‹ã•ã„ã€‚
 
 ----
-¡o—Íƒtƒ@ƒCƒ‹EƒtƒH[ƒ}ƒbƒg
+â– å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«å
 
-	ƒŠƒNƒGƒXƒgEƒŒƒXƒ|ƒ“ƒX‚Ì Raw-ƒf[ƒ^
+	é–‹å§‹æ—¥æ™‚-çµ‚äº†æ—¥æ™‚-ID-NO-ãƒ‡ã‚£ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³.txt
+
+		æŽ¥ç¶šæ—¥æ™‚ ... TCPã‚»ãƒƒã‚·ãƒ§ãƒ³ã‚’ç¢ºç«‹ã—ãŸæ—¥æ™‚
+		åˆ‡æ–­æ—¥æ™‚ ... TCPã‚»ãƒƒã‚·ãƒ§ãƒ³ã‚’åˆ‡æ–­ã—ãŸæ—¥æ™‚
+		ID       ... TCPã‚»ãƒƒã‚·ãƒ§ãƒ³æ¯Žã® 1000 ã‹ã‚‰å§‹ã¾ã‚‹é€£ç•ª
+		NO       ... TCPã‚»ãƒƒã‚·ãƒ§ãƒ³å†…ã§ä½•ç•ªç›®ã®ãƒªã‚¯ã‚¨ã‚¹ãƒˆãƒ»ãƒ¬ã‚¹ãƒãƒ³ã‚¹ã§ã‚ã‚‹ã‹ã‚’ç¤ºã™ 1000 ã‹ã‚‰å§‹ã¾ã‚‹é€£ç•ª
+		æ–¹å‘     ... é€ä¿¡ï¼ˆãƒªã‚¯ã‚¨ã‚¹ãƒˆï¼‰ã§ã‚ã‚Œã° "1-Send", å—ä¿¡ï¼ˆãƒ¬ã‚¹ãƒãƒ³ã‚¹ï¼‰ã§ã‚ã‚Œã° "2-Recv"
 
 ----
-¡“úŽžƒtƒH[ƒ}ƒbƒg
+â– å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«ãƒ»ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆ
 
-	Tunnel2.txt ‚Æ“¯‚¶B
+	ãƒªã‚¯ã‚¨ã‚¹ãƒˆãƒ»ãƒ¬ã‚¹ãƒãƒ³ã‚¹ã® Raw-ãƒ‡ãƒ¼ã‚¿
+
+----
+â– æ—¥æ™‚ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆ
+
+	Tunnel2.txt ã¨åŒã˜ã€‚

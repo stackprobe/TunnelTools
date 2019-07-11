@@ -1,45 +1,45 @@
 ----
-���R�}���h���C��
+■コマンドライン
 
 	multiTrack.exe RECV-PORT DEF-FWD-HOST DEF-FWD-PORT /S
 
-		/S ... ���̃I�v�V�������w�肷��Ɗ��ɋN�����Ă��� multiTrack.exe �����S�ɒ�~�ł��܂��B
-		       ��~����܂Ŏ��Ԃ��|���邱�Ƃ�����܂��B
+		/S ... このオプションを指定すると既に起動している multiTrack.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
 
 	multiTrack.exe RECV-PORT DEF-FWD-HOST DEF-FWD-PORT [//CT CONNECT-TIMEOUT]
 	                                                   [/C CONNECT-MAX] [TRACK-NAME FWD-HOST FWD-PORT | /F FWD-FILE]...
 
-		CONNECT-TIMEOUT ... TCP�ڑ��^�C���A�E�g, [�b] �ȗ����� 20, �w��ł���͈͂� 1 �` 3600
-		CONNECT-MAX     ... �ő�ڑ���, �ȗ����� 1000
-		TRACK-NAME      ... �g���b�N��
-		FWD-HOST        ... �]����z�X�g��
-		FWD-PORT        ... �]����|�[�g�ԍ�
-		FWD-FILE        ... �]���惊�X�g��`�t�@�C��
+		CONNECT-TIMEOUT ... TCP接続タイムアウト, [秒] 省略時は 20, 指定できる範囲は 1 ～ 3600
+		CONNECT-MAX     ... 最大接続数, 省略時は 1000
+		TRACK-NAME      ... トラック名
+		FWD-HOST        ... 転送先ホスト名
+		FWD-PORT        ... 転送先ポート番号
+		FWD-FILE        ... 転送先リスト定義ファイル
 
-		�� DEF-FWD-HOST �� NONE ���w�肷��ƁA�f�t�H���g�̓]����͖����ɂȂ�܂��B
+		★ DEF-FWD-HOST に NONE を指定すると、デフォルトの転送先は無効になります。
 
-		�� DEF-FWD-HOST �� RED ���w�肷��ƁA���_�C���N�g�E���[�h�i�g���b�N�����]����j�ɂȂ�܂��B
+		★ DEF-FWD-HOST に RED を指定すると、リダイレクト・モード（トラック名が転送先）になります。
 
 	- - - -
 
-	�]���惊�X�g��`�t�@�C��
+	転送先リスト定義ファイル
 
-		�e�L�X�g�t�@�C���ŁA��s�Ɣ��p�Z�~�R�����Ŏn�܂�s�͖������܂��B
-		�e�s�͈ȉ��̂悤�ɋL�q���܂��B
+		テキストファイルで、空行と半角セミコロンで始まる行は無視します。
+		各行は以下のように記述します。
 
-			�z�X�g�� + �� + �]����z�X�g�� + �� + �]����|�[�g�ԍ�
+			ホスト名 + 空白 + 転送先ホスト名 + 空白 + 転送先ポート番号
 
 ----
-���g���b�N��
+■トラック名
 
-	�g�p�ł��镶���� 0�`9 A�`Z a�`z _ - . : �ł��B
-	�������� 1�`100 �ł��B
+	使用できる文字は 0～9 A～Z a～z _ - . : です。
+	文字数は 1～100 です。
 
 	- - - -
 
-	���_�C���N�g�E���[�h�Ńg���b�N���ɓ]������w�肷��ɂ͎��̂悤�ɂ��܂��B
+	リダイレクト・モードでトラック名に転送先を指定するには次のようにします。
 
-		�z�X�g��
-		�z�X�g�� + ':' + �|�[�g�ԍ�
+		ホスト名
+		ホスト名 + ':' + ポート番号
 
-	�|�[�g�ԍ����ȗ������ꍇ�� FWD_PORT �ɂȂ�܂��B
+	ポート番号を省略した場合は FWD_PORT になります。

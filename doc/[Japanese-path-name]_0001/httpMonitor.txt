@@ -1,27 +1,27 @@
 ----
-���R�}���h���C��
+■コマンドライン
 
 	httpMonitor.exe RECV-PORT FWD-HOST FWD-PORT /S
 
-		/S ... ���̃I�v�V�������w�肷��Ɗ��ɋN�����Ă��� httpMonitor.exe �����S�ɒ�~�ł��܂��B
-		       ��~����܂Ŏ��Ԃ��|���邱�Ƃ�����܂��B
+		/S ... このオプションを指定すると既に起動している httpMonitor.exe を安全に停止できます。
+		       停止するまで時間が掛かることがあります。
 
 	httpMonitor.exe RECV-PORT FWD-HOST FWD-PORT [//CT CONNECT-TIMEOUT]
 	                                            [/C CONNECT-MAX] [/SX SIZE-MAX] OUT-DIR
 
-		CONNECT-TIMEOUT  ... TCP�ڑ��^�C���A�E�g, [�b] �ȗ����� 20, �w��ł���͈͂� 1 �` 3600
-		CONNECT-MAX      ... �ő�ڑ���, �ȗ����� 1000
-		SIZE-MAX         ... ���N�G�X�g�E���X�|���X�̃T�C�Y�̏��, �P�ʂ̓o�C�g, �ȗ����� 270 ���K�o�C�g
-		OUT-DIR          ... �o�͐�f�B���N�g��
+		CONNECT-TIMEOUT  ... TCP接続タイムアウト, [秒] 省略時は 20, 指定できる範囲は 1 ～ 3600
+		CONNECT-MAX      ... 最大接続数, 省略時は 1000
+		SIZE-MAX         ... リクエスト・レスポンスのサイズの上限, 単位はバイト, 省略時は 270 メガバイト
+		OUT-DIR          ... 出力先ディレクトリ
 
-	�o�͐�f�B���N�g���́A���݂���f�B���N�g���ł��邱�ƁB
+	出力先ディレクトリは、存在するディレクトリであること。
 
 ----
-���o�̓t�@�C����
+■出力ファイル名
 
-	T�`T-SSSS-D-YYYYMMDDhhmmssNNN.txt
+	T～T-SSSS-D-YYYYMMDDhhmmssNNN.txt
 
-	T�`T -> �ڑ��ԍ�
-	SSSS -> �����ڑ����ł̔ԍ�
-	D    -> ���� 0=���, 1=����
-	NNN  -> ���������ł̔ԍ�
+	T～T -> 接続番号
+	SSSS -> 同じ接続内での番号
+	D    -> 方向 0=上り, 1=下り
+	NNN  -> 同じ日時での番号

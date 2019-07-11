@@ -1,42 +1,42 @@
 ----
 
-�|�[�g�t�H���[�f�B���O������ł�HTTP���N�G�X�g�E���X�|���X�̓��e��ۑ����܂��B
+ポートフォワーディングするついでにHTTPリクエスト・レスポンスの内容を保存します。
 
 ----
-���g�p��
+■使用例
 
-�O��
+前提
 
-	WEB-SERVER:80 �� Web �T�[�o�[�������Ă���Ƃ��܂��B
+	WEB-SERVER:80 に Web サーバーが立っているとします。
 
-����
+準備
 
-	�ȉ��̋�̃t�H���_��p�ӂ��܂��B
+	以下の空のフォルダを用意します。
 
 		C:\temp\HTTP_MON_OUT
 		C:\temp\HTTP_MON_PARSE
 
-�菇
+手順
 
-	1. �ȉ��̃R�}���h�����s����B
+	1. 以下のコマンドを実行する。
 
 		> start httpMonitor 80 WEB-SERVER 80 C:\HTTP_MON_OUT
 
-	2. http://WEB-SERVER/ �̑���� http://localhost/ �ɐڑ�����B
+	2. http://WEB-SERVER/ の代わりに http://localhost/ に接続する。
 
-	3. �ʐM���I������� httpMonitor.exe ���~����B
+	3. 通信が終わったら httpMonitor.exe を停止する。
 
-		�G�X�P�[�v�L�[�������͈ȉ��̃R�}���h�����s����B
+		エスケープキー押下又は以下のコマンドを実行する。
 
 			> httpMonitor 80 WEB-SERVER 80 /s
 
-	4. �ȉ��̃R�}���h�����s����B
+	4. 以下のコマンドを実行する。
 
 		> httpMonParse C:\temp\HTTP_MON_OUT C:\temp\HTTP_MON_PARSE
 
-�ȉ��̃t�H���_�ɒʐM���e���o�͂���Ă���͂��ł��B
+以下のフォルダに通信内容が出力されているはずです。
 
 	C:\temp\HTTP_MON_PARSE
 
 
-���z�X�g��, IP�A�h���X, �|�[�g�ԍ�, �f�B���N�g�����͎��ۂ̊��ɂ��킹�ĕύX���ĉ������B
+★ホスト名, IPアドレス, ポート番号, ディレクトリ名は実際の環境にあわせて変更して下さい。

@@ -1,104 +1,104 @@
 ----
-¡ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“
+â– ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³
 
 	crypTunnel.exe RECV-PORT FWD-HOST FWD-PORT /S
 
-		/S ... ‚±‚ÌƒIƒvƒVƒ‡ƒ“‚ðŽw’è‚·‚é‚ÆŠù‚É‹N“®‚µ‚Ä‚¢‚é crypTunnel.exe ‚ðˆÀ‘S‚É’âŽ~‚Å‚«‚Ü‚·B
-		       ’âŽ~‚·‚é‚Ü‚ÅŽžŠÔ‚ªŠ|‚©‚é‚±‚Æ‚ª‚ ‚è‚Ü‚·B
+		/S ... ã“ã®ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’æŒ‡å®šã™ã‚‹ã¨æ—¢ã«èµ·å‹•ã—ã¦ã„ã‚‹ crypTunnel.exe ã‚’å®‰å…¨ã«åœæ­¢ã§ãã¾ã™ã€‚
+		       åœæ­¢ã™ã‚‹ã¾ã§æ™‚é–“ãŒæŽ›ã‹ã‚‹ã“ã¨ãŒã‚ã‚Šã¾ã™ã€‚
 
 	crypTunnel.exe RECV-PORT FWD-HOST FWD-PORT [//CT CONNECT-TIMEOUT]
 	                                           [/C CONNECT-MAX] [/R] [/KW KEY-WIDTH] [/0] [/BSL BLOCK-SIZE-LIMIT] [/T] KEY-BUNDLE-FILE
 
-		CONNECT-TIMEOUT  ... TCPÚ‘±ƒ^ƒCƒ€ƒAƒEƒg, [•b] È—ªŽž‚Í 20, Žw’è‚Å‚«‚é”ÍˆÍ‚Í 1 ` 3600
-		RECV-PORT        ... ‘Ò‚¿Žó‚¯ƒ|[ƒg”Ô†
-		FWD-DOMAIN       ... “]‘—æƒzƒXƒg–¼
-		FWD-PORT         ... “]‘—æƒ|[ƒg”Ô†
-		CONNECT-MAX      ... Å‘å“¯ŽžÚ‘±”, ƒfƒtƒHƒ‹ƒg: 50
-		/R               ... ƒŠƒo[ƒXƒ‚[ƒh
-		KEY-WIDTH        ... Œ®• (16, 24, 32) ƒfƒtƒHƒ‹ƒg: 32
-		KEY-BUNDLE-FILE  ... Œ®‘©ƒtƒ@ƒCƒ‹
-		/0               ... ”•b‚¨‚«‚Éƒ[ƒƒoƒCƒg‚ÌƒuƒƒbƒN‚ðˆÃ†‰»‚µ‚½ƒf[ƒ^‚ð‘—‚èA‘—M‚ª“râ‚·‚éŠúŠÔ‚ð”•bˆÈ“à‚É—¯‚ß‚éB
-		BLOCK-SIZE-LIMIT ... ˆê“x‚ÉˆÃ†‰»‚·‚éƒuƒƒbƒNƒTƒCƒY‚ÌãŒÀ‚ðÝ’è‚µ‚Ü‚·, ƒfƒtƒHƒ‹ƒg: –³§ŒÀ
-		/T               ... GeTunnel‚Æ•¹—p‚µ‚½‚Æ‚«A’·ŽžŠÔ‚Ì–³’ÊM‚É‚æ‚éƒ^ƒCƒ€ƒAƒEƒg‚ª•p”­‚·‚éê‡‚±‚ê‚ðŽw’è‚µ‚Ä‰º‚³‚¢B
+		CONNECT-TIMEOUT  ... TCPæŽ¥ç¶šã‚¿ã‚¤ãƒ ã‚¢ã‚¦ãƒˆ, [ç§’] çœç•¥æ™‚ã¯ 20, æŒ‡å®šã§ãã‚‹ç¯„å›²ã¯ 1 ï½ž 3600
+		RECV-PORT        ... å¾…ã¡å—ã‘ãƒãƒ¼ãƒˆç•ªå·
+		FWD-DOMAIN       ... è»¢é€å…ˆãƒ›ã‚¹ãƒˆå
+		FWD-PORT         ... è»¢é€å…ˆãƒãƒ¼ãƒˆç•ªå·
+		CONNECT-MAX      ... æœ€å¤§åŒæ™‚æŽ¥ç¶šæ•°, ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: 50
+		/R               ... ãƒªãƒãƒ¼ã‚¹ãƒ¢ãƒ¼ãƒ‰
+		KEY-WIDTH        ... éµå¹… (16, 24, 32) ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: 32
+		KEY-BUNDLE-FILE  ... éµæŸãƒ•ã‚¡ã‚¤ãƒ«
+		/0               ... æ•°ç§’ãŠãã«ã‚¼ãƒ­ãƒã‚¤ãƒˆã®ãƒ–ãƒ­ãƒƒã‚¯ã‚’æš—å·åŒ–ã—ãŸãƒ‡ãƒ¼ã‚¿ã‚’é€ã‚Šã€é€ä¿¡ãŒé€”çµ¶ã™ã‚‹æœŸé–“ã‚’æ•°ç§’ä»¥å†…ã«ç•™ã‚ã‚‹ã€‚
+		BLOCK-SIZE-LIMIT ... ä¸€åº¦ã«æš—å·åŒ–ã™ã‚‹ãƒ–ãƒ­ãƒƒã‚¯ã‚µã‚¤ã‚ºã®ä¸Šé™ã‚’è¨­å®šã—ã¾ã™, ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: ç„¡åˆ¶é™
+		/T               ... GeTunnelã¨ä½µç”¨ã—ãŸã¨ãã€é•·æ™‚é–“ã®ç„¡é€šä¿¡ã«ã‚ˆã‚‹ã‚¿ã‚¤ãƒ ã‚¢ã‚¦ãƒˆãŒé »ç™ºã™ã‚‹å ´åˆã“ã‚Œã‚’æŒ‡å®šã—ã¦ä¸‹ã•ã„ã€‚
 
 ----
-¡Œ®‘©ƒtƒ@ƒCƒ‹
+â– éµæŸãƒ•ã‚¡ã‚¤ãƒ«
 
-	mkcr ‚È‚Ç‚É‚æ‚Á‚Ä¶¬‚µ‚½Œ®‘©ƒtƒ@ƒCƒ‹‚ðŽw’è‚µ‚Ä‰º‚³‚¢B
+	mkcr ãªã©ã«ã‚ˆã£ã¦ç”Ÿæˆã—ãŸéµæŸãƒ•ã‚¡ã‚¤ãƒ«ã‚’æŒ‡å®šã—ã¦ä¸‹ã•ã„ã€‚
 
-	ƒtƒ@ƒCƒ‹–¼‚Ì‘ã‚í‚è‚É * ‚ðŽw’è‚·‚é‚ÆAƒpƒXƒtƒŒ[ƒY‚ð’¼Ú“ü—Í‚µ‚Ü‚·B
-	‚Ü‚½ *PASS_PHRASE ‚ðŽw’è‚·‚é‚Æ PASS_PHRASE ‚ðƒpƒXƒtƒŒ[ƒY‚Æ‚µ‚ÄŽg—p‚µ‚Ü‚·B(PASS_PHRASE ‚Í”CˆÓ‚Ì•¶Žš—ñ)
-	ƒpƒXƒtƒŒ[ƒY‚Ì Shift_JIS ‚ÌƒoƒCƒg—ñ‚Ì SHA-512 ‚ðŒ®‚Æ‚µ‚ÄŽg—p‚µ‚Ü‚·B
+	ãƒ•ã‚¡ã‚¤ãƒ«åã®ä»£ã‚ã‚Šã« * ã‚’æŒ‡å®šã™ã‚‹ã¨ã€ãƒ‘ã‚¹ãƒ•ãƒ¬ãƒ¼ã‚ºã‚’ç›´æŽ¥å…¥åŠ›ã—ã¾ã™ã€‚
+	ã¾ãŸ *PASS_PHRASE ã‚’æŒ‡å®šã™ã‚‹ã¨ PASS_PHRASE ã‚’ãƒ‘ã‚¹ãƒ•ãƒ¬ãƒ¼ã‚ºã¨ã—ã¦ä½¿ç”¨ã—ã¾ã™ã€‚(PASS_PHRASE ã¯ä»»æ„ã®æ–‡å­—åˆ—)
+	ãƒ‘ã‚¹ãƒ•ãƒ¬ãƒ¼ã‚ºã® Shift_JIS ã®ãƒã‚¤ãƒˆåˆ—ã® SHA-512 ã‚’éµã¨ã—ã¦ä½¿ç”¨ã—ã¾ã™ã€‚
 
 ----
-¡ƒpƒXƒtƒŒ[ƒY‚Ì‰„’·
+â– ãƒ‘ã‚¹ãƒ•ãƒ¬ãƒ¼ã‚ºã®å»¶é•·
 
-	ƒpƒXƒtƒŒ[ƒY‚ÌÅŒã‚ª [CNN] ‚Å‚ ‚éê‡AƒpƒXƒtƒŒ[ƒY‚ð‰„’·‚µ‚Ü‚·B
+	ãƒ‘ã‚¹ãƒ•ãƒ¬ãƒ¼ã‚ºã®æœ€å¾ŒãŒ [CNN] ã§ã‚ã‚‹å ´åˆã€ãƒ‘ã‚¹ãƒ•ãƒ¬ãƒ¼ã‚ºã‚’å»¶é•·ã—ã¾ã™ã€‚
 
-		C ... ”¼Šp•¶Žš
-		N ... ”¼Šp”Žš
+		C ... åŠè§’æ–‡å­—
+		N ... åŠè§’æ•°å­—
 
-	ƒpƒXƒtƒŒ[ƒY‚ÌŒã‚ë‚É C ‚ð 2^NN •¶Žš’Ç‰Á‚µ‚Ü‚·B
-	NN ‚ÉŽw’è‚Å‚«‚é”ÍˆÍ‚Í 10`40 ‚Å‚·B
+	ãƒ‘ã‚¹ãƒ•ãƒ¬ãƒ¼ã‚ºã®å¾Œã‚ã« C ã‚’ 2^NN æ–‡å­—è¿½åŠ ã—ã¾ã™ã€‚
+	NN ã«æŒ‡å®šã§ãã‚‹ç¯„å›²ã¯ 10ï½ž40 ã§ã™ã€‚
 
-	—á‚¦‚Î
+	ä¾‹ãˆã°
 
 		abc[e30]
 
-	‚Í
+	ã¯
 
 		abceeeeeeeee...eeeeeeeee
-		   |<---- 2^30 ŒÂ ---->|
+		   |<---- 2^30 å€‹ ---->|
 
-	‚É‚È‚è‚Ü‚·B
+	ã«ãªã‚Šã¾ã™ã€‚
 
-	ƒpƒXƒtƒŒ[ƒY‚ª’·‚­‚È‚é‚ÆŒ®‚Ì¶¬‚ÉŽžŠÔ‚ªŠ|‚©‚é‚½‚ßA‘“–‚èUŒ‚‘Îô‚É‚È‚éEEE‚æ‚¤‚È‹C‚ª‚µ‚Ü‚·B
+	ãƒ‘ã‚¹ãƒ•ãƒ¬ãƒ¼ã‚ºãŒé•·ããªã‚‹ã¨éµã®ç”Ÿæˆã«æ™‚é–“ãŒæŽ›ã‹ã‚‹ãŸã‚ã€ç·å½“ã‚Šæ”»æ’ƒå¯¾ç­–ã«ãªã‚‹ãƒ»ãƒ»ãƒ»ã‚ˆã†ãªæ°—ãŒã—ã¾ã™ã€‚
 
 ----
-¡ˆÃ†‰»‚ÌŽÀ‘•
+â– æš—å·åŒ–ã®å®Ÿè£…
 
-	œƒlƒSƒVƒG[ƒVƒ‡ƒ“
+	â—ãƒã‚´ã‚·ã‚¨ãƒ¼ã‚·ãƒ§ãƒ³
 
-	ˆÈ‰º‚ÌŽè‡‚ðŽÀs‚µ‚Ü‚·B
+	ä»¥ä¸‹ã®æ‰‹é †ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 
-	 1. DEC_COUNTER <- ƒ‰ƒ“ƒ_ƒ€‚ÈƒoƒCƒg—ñ (64 ƒoƒCƒg)
+	 1. DEC_COUNTER <- ãƒ©ãƒ³ãƒ€ãƒ ãªãƒã‚¤ãƒˆåˆ— (64 ãƒã‚¤ãƒˆ)
 	 2. CIPHER_1 = ENCRYPT ( DEC_COUNTER )
-	 3. ’ÊM‘ŠŽè‚Æ CIPHER_1 ‚ðŒðŠ·‚·‚éB
+	 3. é€šä¿¡ç›¸æ‰‹ã¨ CIPHER_1 ã‚’äº¤æ›ã™ã‚‹ã€‚
 	 4. ENC_COUNTER = DECRYPT ( CIPHER_1 )
-	 5. ENC_COUNTER ‚ðƒCƒ“ƒNƒŠƒƒ“ƒg‚·‚éB
+	 5. ENC_COUNTER ã‚’ã‚¤ãƒ³ã‚¯ãƒªãƒ¡ãƒ³ãƒˆã™ã‚‹ã€‚
 	 6. CIPHER_2 = ENCRYPT ( ENC_COUNTER )
-	 7. ’ÊM‘ŠŽè‚Æ CIPHER_2 ‚ðŒðŠ·‚·‚éB
+	 7. é€šä¿¡ç›¸æ‰‹ã¨ CIPHER_2 ã‚’äº¤æ›ã™ã‚‹ã€‚
 	 8. WRK_COUNTER = DECRYPT ( CIPHER_2 )
-	 9. DEC_COUNTER ‚ðƒCƒ“ƒNƒŠƒƒ“ƒg‚·‚éB
-	10. DEC_COUNTER ‚Æ WRK_COUNTER ‚ð”äŠr‚µ‚Äˆê’v‚µ‚È‚¯‚ê‚Î’¼‚¿‚ÉØ’f‚·‚éB
+	 9. DEC_COUNTER ã‚’ã‚¤ãƒ³ã‚¯ãƒªãƒ¡ãƒ³ãƒˆã™ã‚‹ã€‚
+	10. DEC_COUNTER ã¨ WRK_COUNTER ã‚’æ¯”è¼ƒã—ã¦ä¸€è‡´ã—ãªã‘ã‚Œã°ç›´ã¡ã«åˆ‡æ–­ã™ã‚‹ã€‚
 
-		ENCRYPT ... ÅŒã‚ÌƒuƒƒbƒN‚ð IV ‚Æ‚·‚é Camellia CBC ‚ðŒ®‘©‚ÌŒ®‚Ì”‚¾‚¯ŒJ‚è•Ô‚·B
-		DECRPYT ... ENCRYPT ‚Ì‹t‚ðs‚¤B
+		ENCRYPT ... æœ€å¾Œã®ãƒ–ãƒ­ãƒƒã‚¯ã‚’ IV ã¨ã™ã‚‹ Camellia CBC ã‚’éµæŸã®éµã®æ•°ã ã‘ç¹°ã‚Šè¿”ã™ã€‚
+		DECRPYT ... ENCRYPT ã®é€†ã‚’è¡Œã†ã€‚
 
-		šˆÃ†‰»Žž‚Ì COUNTER ‚Æ‚µ‚Ä ENC_COUNTER, •œ†Žž‚Ì COUNTER ‚Æ‚µ‚Ä DEC_COUNTER ‚ð‚»‚ê‚¼‚êŽg—p‚µ‚Ü‚·B
-		š—”‚Í CSPRNG ‚©‚çŽæ“¾‚µ‚Ü‚·B
+		â˜…æš—å·åŒ–æ™‚ã® COUNTER ã¨ã—ã¦ ENC_COUNTER, å¾©å·æ™‚ã® COUNTER ã¨ã—ã¦ DEC_COUNTER ã‚’ãã‚Œãžã‚Œä½¿ç”¨ã—ã¾ã™ã€‚
+		â˜…ä¹±æ•°ã¯ CSPRNG ã‹ã‚‰å–å¾—ã—ã¾ã™ã€‚
 
-	œ’ÊM
+	â—é€šä¿¡
 
-	“ü—ÍƒXƒgƒŠ[ƒ€‚ð“K“–‚È’·‚³‚Å‹æØ‚Á‚ÄAˆÈ‰º‚ÌˆÃ†‰»‚ðŽÀs‚µ‚Ü‚·B
+	å…¥åŠ›ã‚¹ãƒˆãƒªãƒ¼ãƒ ã‚’é©å½“ãªé•·ã•ã§åŒºåˆ‡ã£ã¦ã€ä»¥ä¸‹ã®æš—å·åŒ–ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 
 	CIPHER = ENCRYPT ( PLAIN + COUNTER + PADDING + PADDING_SIZE + RAND_PART_1 + HASH + RAND_PART_2 )
 
-		CIPHER       ... ˆÃ†•¶
-		PLAIN        ... •½•¶
-		COUNTER      ... ƒJƒEƒ“ƒ^, ˆÃ†‰»‚·‚é“x‚ÉƒCƒ“ƒNƒŠƒƒ“ƒg‚·‚éB(64 ƒoƒCƒg)
-		PADDING      ... ƒ‰ƒ“ƒ_ƒ€‚ÈƒoƒCƒg—ñ (1`255 ƒoƒCƒg, PLAIN + COUNTER + PADDING + PADDING_SIZE ‚Ì’·‚³‚ª 16 ‚Ì”{”‚Æ‚È‚éƒ‰ƒ“ƒ_ƒ€‚È’·‚³)
-		PADDING_SIZE ... PADDING ‚ÌƒoƒCƒg” (1 ƒoƒCƒg)
-		RAND_PART_1  ... ƒ‰ƒ“ƒ_ƒ€‚ÈƒoƒCƒg—ñ (64 ƒoƒCƒg)
-		HASH         ... PLAIN + COUNTER + PADDING + PADDING_SIZE + RAND_PART_1 ‚Ì SHA-512 (64 ƒoƒCƒg)
-		RAND_PART_2  ... ƒ‰ƒ“ƒ_ƒ€‚ÈƒoƒCƒg—ñ (64 ƒoƒCƒg)
-		ENCRYPT      ... ÅŒã‚ÌƒuƒƒbƒN‚ð IV ‚Æ‚·‚é Camellia CBC ‚ðŒ®‘©‚ÌŒ®‚Ì”‚¾‚¯ŒJ‚è•Ô‚·B
+		CIPHER       ... æš—å·æ–‡
+		PLAIN        ... å¹³æ–‡
+		COUNTER      ... ã‚«ã‚¦ãƒ³ã‚¿, æš—å·åŒ–ã™ã‚‹åº¦ã«ã‚¤ãƒ³ã‚¯ãƒªãƒ¡ãƒ³ãƒˆã™ã‚‹ã€‚(64 ãƒã‚¤ãƒˆ)
+		PADDING      ... ãƒ©ãƒ³ãƒ€ãƒ ãªãƒã‚¤ãƒˆåˆ— (1ï½ž255 ãƒã‚¤ãƒˆ, PLAIN + COUNTER + PADDING + PADDING_SIZE ã®é•·ã•ãŒ 16 ã®å€æ•°ã¨ãªã‚‹ãƒ©ãƒ³ãƒ€ãƒ ãªé•·ã•)
+		PADDING_SIZE ... PADDING ã®ãƒã‚¤ãƒˆæ•° (1 ãƒã‚¤ãƒˆ)
+		RAND_PART_1  ... ãƒ©ãƒ³ãƒ€ãƒ ãªãƒã‚¤ãƒˆåˆ— (64 ãƒã‚¤ãƒˆ)
+		HASH         ... PLAIN + COUNTER + PADDING + PADDING_SIZE + RAND_PART_1 ã® SHA-512 (64 ãƒã‚¤ãƒˆ)
+		RAND_PART_2  ... ãƒ©ãƒ³ãƒ€ãƒ ãªãƒã‚¤ãƒˆåˆ— (64 ãƒã‚¤ãƒˆ)
+		ENCRYPT      ... æœ€å¾Œã®ãƒ–ãƒ­ãƒƒã‚¯ã‚’ IV ã¨ã™ã‚‹ Camellia CBC ã‚’éµæŸã®éµã®æ•°ã ã‘ç¹°ã‚Šè¿”ã™ã€‚
 
-		š•œ†Žž HASH ‚ðƒ`ƒFƒbƒN‚µAˆê’v‚µ‚È‚©‚Á‚½ê‡A”j‘¹–”‚Í‰ü‚´‚ñ‚ÆŒ©‚È‚µA’¼‚¿‚ÉØ’f‚µ‚Ü‚·B
-		š—”‚Í CSPRNG ‚©‚çŽæ“¾‚µ‚Ü‚·B
+		â˜…å¾©å·æ™‚ HASH ã‚’ãƒã‚§ãƒƒã‚¯ã—ã€ä¸€è‡´ã—ãªã‹ã£ãŸå ´åˆã€ç ´æåˆã¯æ”¹ã–ã‚“ã¨è¦‹ãªã—ã€ç›´ã¡ã«åˆ‡æ–­ã—ã¾ã™ã€‚
+		â˜…ä¹±æ•°ã¯ CSPRNG ã‹ã‚‰å–å¾—ã—ã¾ã™ã€‚
 
 ----
-¡ŽÀs—á
+â– å®Ÿè¡Œä¾‹
 
 	> crypTunnel 61000 ABC 62000 C:\KEYS\123.kb
 

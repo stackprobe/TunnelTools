@@ -1,77 +1,77 @@
 ----
-¡ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“
+â– ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³
 
 	Tunnel2.exe RECV-PORT FWD-HOST FWD-PORT /S
 
-		/S ... ‚±‚ÌƒIƒvƒVƒ‡ƒ“‚ðŽw’è‚·‚é‚ÆŠù‚É‹N“®‚µ‚Ä‚¢‚é Tunnel2.exe ‚ðˆÀ‘S‚É’âŽ~‚Å‚«‚Ü‚·B
-		       ’âŽ~‚·‚é‚Ü‚ÅŽžŠÔ‚ªŠ|‚©‚é‚±‚Æ‚ª‚ ‚è‚Ü‚·B
+		/S ... ã“ã®ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’æŒ‡å®šã™ã‚‹ã¨æ—¢ã«èµ·å‹•ã—ã¦ã„ã‚‹ Tunnel2.exe ã‚’å®‰å…¨ã«åœæ­¢ã§ãã¾ã™ã€‚
+		       åœæ­¢ã™ã‚‹ã¾ã§æ™‚é–“ãŒæŽ›ã‹ã‚‹ã“ã¨ãŒã‚ã‚Šã¾ã™ã€‚
 
 	Tunnel2.exe RECV-PORT FWD-HOST FWD-PORT [//CT CONNECT-TIMEOUT] [/C CONNECT-MAX] [/F LOG-FILE | /A LOG-FILE]
 
-		CONNECT-TIMEOUT ... TCPÚ‘±ƒ^ƒCƒ€ƒAƒEƒg, [•b] È—ªŽž‚Í 20, Žw’è‚Å‚«‚é”ÍˆÍ‚Í 1 ` 3600
-		RECV-PORT       ... ‘ÒŽóƒ|[ƒg”Ô†
-		FWD-HOST        ... “]‘—æƒzƒXƒg–¼
-		FWD-PORT        ... “]‘—æƒ|[ƒg”Ô†
-		CONNECT-MAX     ... Å‘å“¯ŽžÚ‘±” (È—ªŽžF1000)
-		/F              ... V‹K or ã‘‚«
-		/A              ... V‹K or ’Ç‹L
-		LOG-FILE        ... ƒƒOo—Íƒtƒ@ƒCƒ‹
+		CONNECT-TIMEOUT ... TCPæŽ¥ç¶šã‚¿ã‚¤ãƒ ã‚¢ã‚¦ãƒˆ, [ç§’] çœç•¥æ™‚ã¯ 20, æŒ‡å®šã§ãã‚‹ç¯„å›²ã¯ 1 ï½ž 3600
+		RECV-PORT       ... å¾…å—ãƒãƒ¼ãƒˆç•ªå·
+		FWD-HOST        ... è»¢é€å…ˆãƒ›ã‚¹ãƒˆå
+		FWD-PORT        ... è»¢é€å…ˆãƒãƒ¼ãƒˆç•ªå·
+		CONNECT-MAX     ... æœ€å¤§åŒæ™‚æŽ¥ç¶šæ•° (çœç•¥æ™‚ï¼š1000)
+		/F              ... æ–°è¦ or ä¸Šæ›¸ã
+		/A              ... æ–°è¦ or è¿½è¨˜
+		LOG-FILE        ... ãƒ­ã‚°å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«
 
-		ƒƒOo—Íƒtƒ@ƒCƒ‹‚ðÈ—ª‚·‚é‚Æ tmp ƒtƒHƒ‹ƒ_“à‚Éƒtƒ@ƒCƒ‹‚ðì¬Eo—Í‚µAI—¹Žž‚ÉƒtƒHƒ‹ƒ_‚ðŠJ‚«‚Ü‚·B
-
-----
-¡o—Íƒtƒ@ƒCƒ‹–¼ (È—ªŽž)
-
-	Tunnel2_o—Í“úŽž.csv
-
-		o—Í“úŽž ... ‚±‚Ìƒtƒ@ƒCƒ‹‚ð¶¬‚µ‚½“úŽž
+		ãƒ­ã‚°å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«ã‚’çœç•¥ã™ã‚‹ã¨ tmp ãƒ•ã‚©ãƒ«ãƒ€å†…ã«ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆãƒ»å‡ºåŠ›ã—ã€çµ‚äº†æ™‚ã«ãƒ•ã‚©ãƒ«ãƒ€ã‚’é–‹ãã¾ã™ã€‚
 
 ----
-¡o—Íƒtƒ@ƒCƒ‹EƒtƒH[ƒ}ƒbƒg
+â– å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«å (çœç•¥æ™‚)
 
-	Œ`Ž®       ... CSV
-	•¶ŽšƒR[ƒh ... ASCII
-	‰üsƒR[ƒh ... CR-LF
+	Tunnel2_å‡ºåŠ›æ—¥æ™‚.csv
 
-	Šes‚Ì—ñ‚ÍˆÈ‰º‚Ì‚Æ‚¨‚è
+		å‡ºåŠ›æ—¥æ™‚ ... ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã—ãŸæ—¥æ™‚
 
-		yÚ‘±Žžz
+----
+â– å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«ãƒ»ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆ
 
-			“úŽž , TCPƒZƒbƒVƒ‡ƒ“ID , C , ""
+	å½¢å¼       ... CSV
+	æ–‡å­—ã‚³ãƒ¼ãƒ‰ ... ASCII
+	æ”¹è¡Œã‚³ãƒ¼ãƒ‰ ... CR-LF
 
-		yØ’fŽžz
+	å„è¡Œã®åˆ—ã¯ä»¥ä¸‹ã®ã¨ãŠã‚Š
 
-			“úŽž , TCPƒZƒbƒVƒ‡ƒ“ID , D , ""
+		ã€æŽ¥ç¶šæ™‚ã€‘
 
-		y’ÊMŽžz
+			æ—¥æ™‚ , TCPã‚»ãƒƒã‚·ãƒ§ãƒ³ID , C , ""
 
-			“úŽž , TCPƒZƒbƒVƒ‡ƒ“ID , •ûŒü , "’ÊMƒf[ƒ^"
+		ã€åˆ‡æ–­æ™‚ã€‘
+
+			æ—¥æ™‚ , TCPã‚»ãƒƒã‚·ãƒ§ãƒ³ID , D , ""
+
+		ã€é€šä¿¡æ™‚ã€‘
+
+			æ—¥æ™‚ , TCPã‚»ãƒƒã‚·ãƒ§ãƒ³ID , æ–¹å‘ , "é€šä¿¡ãƒ‡ãƒ¼ã‚¿"
 
 		- - -
 
-		“úŽž            ... ‚»‚Ìs‚ÌÚ‘±EØ’fE’ÊM‚ð‹L˜^‚µ‚½“úŽž
-		TCPƒZƒbƒVƒ‡ƒ“ID ... TCPƒZƒbƒVƒ‡ƒ“–ˆ‚É•t”Ô‚³‚ê‚é 1000 ‚©‚çŽn‚Ü‚é˜A”Ô
-		•ûŒü            ... ã‚èƒf[ƒ^‚Ì‚Æ‚« S ‰º‚èƒf[ƒ^‚Ì‚Æ‚« R
-		’ÊMƒf[ƒ^      ... ŽÀÛ‚É‘—ŽóM‚³‚ê‚½ƒf[ƒ^AƒRƒ“ƒgƒ[ƒ‹ƒR[ƒh“™‚ð \00 ‚ÅƒGƒXƒP[ƒv‚µ‚½ ASCII •¶Žš—ñ
+		æ—¥æ™‚            ... ãã®è¡Œã®æŽ¥ç¶šãƒ»åˆ‡æ–­ãƒ»é€šä¿¡ã‚’è¨˜éŒ²ã—ãŸæ—¥æ™‚
+		TCPã‚»ãƒƒã‚·ãƒ§ãƒ³ID ... TCPã‚»ãƒƒã‚·ãƒ§ãƒ³æ¯Žã«ä»˜ç•ªã•ã‚Œã‚‹ 1000 ã‹ã‚‰å§‹ã¾ã‚‹é€£ç•ª
+		æ–¹å‘            ... ä¸Šã‚Šãƒ‡ãƒ¼ã‚¿ã®ã¨ã S ä¸‹ã‚Šãƒ‡ãƒ¼ã‚¿ã®ã¨ã R
+		é€šä¿¡ãƒ‡ãƒ¼ã‚¿      ... å®Ÿéš›ã«é€å—ä¿¡ã•ã‚ŒãŸãƒ‡ãƒ¼ã‚¿ã€ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã‚³ãƒ¼ãƒ‰ç­‰ã‚’ \00 ã§ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã—ãŸ ASCII æ–‡å­—åˆ—
 
 ----
-¡“úŽžƒtƒH[ƒ}ƒbƒg
+â– æ—¥æ™‚ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆ
 
 	YYYYMMDDhhmmssIII
 
-		YYYY ... ¼—ï”N
-		MM   ... ŒŽ
-		DD   ... “ú
-		hh   ... Žž (24ŽžŠÔ•\‹L)
-		mm   ... •ª
-		ss   ... •b
-		III  ... ‚È‚ñ‚¿‚á‚Á‚Äƒ~ƒŠ•b ¦1
+		YYYY ... è¥¿æš¦å¹´
+		MM   ... æœˆ
+		DD   ... æ—¥
+		hh   ... æ™‚ (24æ™‚é–“è¡¨è¨˜)
+		mm   ... åˆ†
+		ss   ... ç§’
+		III  ... ãªã‚“ã¡ã‚ƒã£ã¦ãƒŸãƒªç§’ â€»1
 
-	¦1 ... “¯‚¶•b“à‚Ì‚Æ‚«‘‚¢‡‚É•t”Ô‚³‚ê‚é 000 ‚©‚çŽn‚Ü‚é˜A”Ô
+	â€»1 ... åŒã˜ç§’å†…ã®ã¨ãæ—©ã„é †ã«ä»˜ç•ªã•ã‚Œã‚‹ 000 ã‹ã‚‰å§‹ã¾ã‚‹é€£ç•ª
 
 ----
-¡’ÊMƒf[ƒ^‚ÌƒGƒXƒP[ƒv‚·‚é•¶Žš
+â– é€šä¿¡ãƒ‡ãƒ¼ã‚¿ã®ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã™ã‚‹æ–‡å­—
 
-	ƒRƒ“ƒgƒ[ƒ‹ƒR[ƒh ... 0x00 ` 0x1f, 0x7f ` 0xa0, 0xe0 ` 0xff
+	ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã‚³ãƒ¼ãƒ‰ ... 0x00 ï½ž 0x1f, 0x7f ï½ž 0xa0, 0xe0 ï½ž 0xff
 	"                  ... 0x22
 	\                  ... 0x5c

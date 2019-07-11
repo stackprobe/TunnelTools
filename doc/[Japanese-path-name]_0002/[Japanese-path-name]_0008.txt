@@ -1,96 +1,96 @@
 ----
 
-�ʐM���e���Í������ă|�[�g�t�H���[�f�B���O���܂��B
+通信内容を暗号化してポートフォワーディングします。
 
 ----
-���R�}���h���C��
+■コマンドライン
 
-�Í���
+暗号化
 
-	> crypTunnel �҂��󂯃|�[�g�ԍ� �]����z�X�g�� �]����|�[�g�ԍ� *�p�X�t���[�Y
+	> crypTunnel 待ち受けポート番号 転送先ホスト名 転送先ポート番号 *パスフレーズ
 
-����
+復号
 
-	> crypTunnel �҂��󂯃|�[�g�ԍ� �]����z�X�g�� �]����|�[�g�ԍ� /r *�p�X�t���[�Y
+	> crypTunnel 待ち受けポート番号 転送先ホスト名 転送先ポート番号 /r *パスフレーズ
 
 ----
-���g�p��
+■使用例
 
-�l�b�g���[�N�\��
+ネットワーク構成
 
-	�z�X�g��   IP                Listen Port
+	ホスト名   IP                Listen Port
 	----------------------------------------
 	Lovely     192.168.123.101   none
 	Princess   192.168.123.102   none
 	Hoeny      192.168.123.103   none
 	Fortune    192.168.123.104   60000
 
-Lovely -> Fortune:60000 �̒ʐM���e���Í�������ɂ͈ȉ��̂悤�ɂ��܂��B
+Lovely -> Fortune:60000 の通信内容を暗号化するには以下のようにします。
 
-	a. Lovely -> Princess:60001 -> Hoeny:60002 -> Fortune:60000 �ƒ��p����B(Princess -> Hoeny ���Í�������܂�)
+	a. Lovely -> Princess:60001 -> Hoeny:60002 -> Fortune:60000 と中継する。(Princess -> Hoeny が暗号化されます)
 
-		1. Princess �ňȉ��̃R�}���h�����s����B
+		1. Princess で以下のコマンドを実行する。
 
 			> start crypTunnel 60001 Hoeny 60002 *macadamiaHD[a25]
 
-			�܂���
+			または
 
 			> start crypTunnel 60001 192.168.123.103 60002 *macadamiaHD[a25]
 
-		2. Hoeny �ňȉ��̃R�}���h�����s����B
+		2. Hoeny で以下のコマンドを実行する。
 
 			> start crypTunnel 60002 Fortune 60000 /r *macadamiaHD[a25]
 
-			�܂���
+			または
 
 			> start crypTunnel 60002 192.168.123.104 60000 /r *macadamiaHD[a25]
 
-		3. Lovely -> Fortune:60000 �̑���� Lovely -> Princess:60001 �ɐڑ�����B
+		3. Lovely -> Fortune:60000 の代わりに Lovely -> Princess:60001 に接続する。
 
-	b. Lovely -> Fortune �Ƒ��̃z�X�g���g�킸�ɐڑ�����B(Lovely -> Fortune ���Í�������܂�)
+	b. Lovely -> Fortune と他のホストを使わずに接続する。(Lovely -> Fortune が暗号化されます)
 
-		1. Lovely �ňȉ��̃R�}���h�����s����B
+		1. Lovely で以下のコマンドを実行する。
 
 			> start crypTunnel 60001 Fortune 60002 *macadamiaHD[a25]
 
-			�܂���
+			または
 
 			> start crypTunnel 60001 192.168.123.104 60002 *macadamiaHD[a25]
 
-		2. Fortune �ňȉ��̃R�}���h�����s����B
+		2. Fortune で以下のコマンドを実行する。
 
 			> start crypTunnel 60002 localhost 60000 /r *macadamiaHD[a25]
 
-		3. Lovely -> Fortune:60000 �̑���� Lovely -> localhost:60001 �ɐڑ�����B
+		3. Lovely -> Fortune:60000 の代わりに Lovely -> localhost:60001 に接続する。
 
-	���p�X�t���[�Y macadamiaHD[a25] �͓K�X�ύX���ĉ������B
+	★パスフレーズ macadamiaHD[a25] は適宜変更して下さい。
 
 ----
 
-��苭�łȈÍ��ɂ������ꍇ�͌����t�@�C�����g���܂��B
-�����t�@�C���i�e�L�X�g�t�@�C���~�P�j�����S�ȕ��@�ŋ��L����K�v������܂����A
-�U���҂ɂ�錮�̓���͌v�Z�ʓI�ɕs�\�ɂȂ�܂��B
+より強固な暗号にしたい場合は鍵束ファイルを使います。
+鍵束ファイル（テキストファイル×１）を安全な方法で共有する必要がありますが、
+攻撃者による鍵の特定は計算量的に不可能になります。
 
-�ȉ��̂悤�ɂ��܂��B
+以下のようにします。
 
-	1. �����t�@�C���𐶐����ĈÍ������E�������̗��z�X�g�ŋ��L���܂��B
+	1. 鍵束ファイルを生成して暗号化側・復号側の両ホストで共有します。
 
-		�ǂ����̃z�X�g�ňȉ��̃R�}���h�����s���A�����t�@�C�� happiness.keybdl ���쐬���܂��B
+		どこかのホストで以下のコマンドを実行し、鍵束ファイル happiness.keybdl を作成します。
 
 			> mkcr /f happiness.keybdl
 
-		�쐬���� happiness.keybdl �𗼃z�X�g�ŋ��L���܂��B
-		���z�X�g�� C:\KEYS\happiness.keybdl �ɒu�����Ƃ��܂��B
+		作成した happiness.keybdl を両ホストで共有します。
+		両ホストの C:\KEYS\happiness.keybdl に置いたとします。
 
-	2. �ȉ��̃R�}���h�����s���܂��B
+	2. 以下のコマンドを実行します。
 
-		�Í���
+		暗号化
 
 			> start crypTunnel 60001 Hoeny 60002 C:\KEYS\happiness.keybdl
 
-		����
+		復号
 
 			> start crypTunnel 60002 Fortune 60000 /r C:\KEYS\happiness.keybdl
 
 
-���z�X�g��, IP�A�h���X, �|�[�g�ԍ��͎��ۂ̊��ɂ��킹�ĕύX���ĉ������B
+★ホスト名, IPアドレス, ポート番号は実際の環境にあわせて変更して下さい。

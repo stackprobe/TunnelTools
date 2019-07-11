@@ -1,145 +1,145 @@
 ----
 
-HTTP�v���L�V�̓�������O���փg���l�����O���܂��B
+HTTPプロキシの内側から外側へトンネリングします。
 
-�v���L�V�̓����ƊO���ɂ��ꂼ�ꒆ�p�p�̃z�X�g���K�v�ł��B
-�i�v���L�V�̓����́A���M���̃z�X�g�����p�p�̃z�X�g�����˂邱�Ƃ��ł��܂��j
-
-----
-���R�}���h���C��
-
-�G���R�[�h��
-
-	> boomClient �҂��󂯃|�[�g�ԍ� GeTunnel_�z�X�g�� GeTunnel_�|�[�g�ԍ� /ss 2500
-	> GeTunnel �҂��󂯃|�[�g�ԍ� �]����z�X�g�� �]����|�[�g�ԍ� /p HTTP�v���L�V�z�X�g�� HTTP�v���L�V�|�[�g�ԍ� /e 2
-
-�f�R�[�h��
-
-	> GeTunnel �҂��󂯃|�[�g�ԍ� boomServer_�z�X�g�� boomServer_�|�[�g�ԍ� /r
-	> boomServer �҂��󂯃|�[�g�ԍ� �]����z�X�g�� �]����|�[�g�ԍ�
+プロキシの内側と外側にそれぞれ中継用のホストが必要です。
+（プロキシの内側は、送信元のホストが中継用のホストを兼ねることができます）
 
 ----
-���g�p��(1) -- HTTP�ȊO�̃v���g�R���ŊO���ɐڑ�����
+■コマンドライン
 
-�l�b�g���[�N�\��
+エンコード側
 
-	�z�X�g��   IP                Network   Listen Port   note
+	> boomClient 待ち受けポート番号 GeTunnel_ホスト名 GeTunnel_ポート番号 /ss 2500
+	> GeTunnel 待ち受けポート番号 転送先ホスト名 転送先ポート番号 /p HTTPプロキシホスト名 HTTPプロキシポート番号 /e 2
+
+デコード側
+
+	> GeTunnel 待ち受けポート番号 boomServer_ホスト名 boomServer_ポート番号 /r
+	> boomServer 待ち受けポート番号 転送先ホスト名 転送先ポート番号
+
+----
+■使用例(1) -- HTTP以外のプロトコルで外側に接続する
+
+ネットワーク構成
+
+	ホスト名   IP                Network   Listen Port   note
 	----------------------------------------------------------------------
 	Melody     192.168.222.201   A         none
 	Hammy      192.168.222.202   A         none
-	Muse       192.168.222.203   A         8080          HTTP�v���L�V_����
+	Muse       192.168.222.203   A         8080          HTTPプロキシ_内側
 
-	Muse       192.168.111.101   B         none          HTTP�v���L�V_�O��
+	Muse       192.168.111.101   B         none          HTTPプロキシ_外側
 	Beat       192.168.111.102   B         none
 	Rhythm     192.168.111.103   B         60000
 
-Melody -> Rhythm:60000 �� Muse ���u���b�N���Ă���Ƃ��܂��B(Beat:80, Rhythm:80 �ւ̐ڑ��͋�����Ă���)
-�ڑ��ł���悤�ɂ���ɂ͈ȉ��̂悤�ɂ��܂��B
+Melody -> Rhythm:60000 は Muse がブロックしているとします。(Beat:80, Rhythm:80 への接続は許可されている)
+接続できるようにするには以下のようにします。
 
-	a. Melody -> Hammy:60000 -> Beat:80 -> Rhythm:60000 �ƒ��p����B
+	a. Melody -> Hammy:60000 -> Beat:80 -> Rhythm:60000 と中継する。
 
-		1. Hammy �ňȉ��̃R�}���h�����s����B
+		1. Hammy で以下のコマンドを実行する。
 
 			> start boomClient 60000 localhost 60001 /ss 2500
 			> start GeTunnel 60001 Beat 80 /p Muse 8080 /e 2
 
-			�܂���
+			または
 
 			> start boomClient 60000 localhost 60001 /ss 2500
 			> start GeTunnel 60001 192.168.111.102 80 /p 192.168.222.203 8080 /e 2
 
-		2. Beat �ňȉ��̃R�}���h�����s����B
+		2. Beat で以下のコマンドを実行する。
 
 			> start GeTunnel 80 localhost 60001 /r
 			> start boomServer 60001 Rhythm 60000
 
-			�܂���
+			または
 
 			> start GeTunnel 80 localhost 60001 /r
 			> start boomServer 60001 192.168.111.103 60000
 
-		3. Melody -> Rhythm:60000 �̑���� Melody -> Hammy:60000 �ɐڑ�����B
+		3. Melody -> Rhythm:60000 の代わりに Melody -> Hammy:60000 に接続する。
 
-	b. Melody -> Rhythm �Ƒ��̃z�X�g���g�킸�ɐڑ�����B
+	b. Melody -> Rhythm と他のホストを使わずに接続する。
 
-		1. Melody �ňȉ��̃R�}���h�����s����B
+		1. Melody で以下のコマンドを実行する。
 
 			> start boomClient 60000 localhost 60001 /ss 2500
 			> start GeTunnel 60001 Rhythm 80 /p Muse 8080 /e 2
 
-			�܂���
+			または
 
 			> start boomClient 60000 localhost 60001 /ss 2500
 			> start GeTunnel 60001 192.168.111.103 80 /p 192.168.222.203 8080 /e 2
 
-		2. Rhythm �ňȉ��̃R�}���h�����s����B
+		2. Rhythm で以下のコマンドを実行する。
 
 			> start GeTunnel 80 localhost 60001 /r
 			> start boomServer 60001 localhost 60000
 
-		3. Melody -> Rhythm:60000 �̑���� Melody -> localhost:60000 �ɐڑ�����B
+		3. Melody -> Rhythm:60000 の代わりに Melody -> localhost:60000 に接続する。
 
 ----
-���g�p��(2) -- HTTP�v���L�V�ɋK������Ă���T�C�g���u���E�U�ŊJ��
+■使用例(2) -- HTTPプロキシに規制されているサイトをブラウザで開く
 
-�l�b�g���[�N�\��
+ネットワーク構成
 
-	�z�X�g��   IP                Network   Listen Port   note
+	ホスト名   IP                Network   Listen Port   note
 	----------------------------------------------------------------------
 	Melody     192.168.222.201   A         none
 	Hammy      192.168.222.202   A         none
-	Muse       192.168.222.203   A         8080          HTTP�v���L�V_����
+	Muse       192.168.222.203   A         8080          HTTPプロキシ_内側
 
-	Muse       192.168.111.101   B         none          HTTP�v���L�V_�O��
+	Muse       192.168.111.101   B         none          HTTPプロキシ_外側
 	Beat       192.168.111.102   B         none
-	Rhythm     192.168.111.103   B         80            Web�T�[�o�[
+	Rhythm     192.168.111.103   B         80            Webサーバー
 
-Melody -> Rhythm:80 �� Muse ���K�����Ă���Ƃ��܂��B(Beat:80 �ւ̐ڑ��͋�����Ă���)
-�ڑ��ł���悤�ɂ���ɂ͈ȉ��̂悤�ɂ��܂��B
+Melody -> Rhythm:80 は Muse が規制しているとします。(Beat:80 への接続は許可されている)
+接続できるようにするには以下のようにします。
 
-	a. Melody -> Hammy:8080 -> Beat:80 -> Rhythm:80 �ƒ��p����B
+	a. Melody -> Hammy:8080 -> Beat:80 -> Rhythm:80 と中継する。
 
-		1. Hammy �ňȉ��̃R�}���h�����s����B
+		1. Hammy で以下のコマンドを実行する。
 
 			> start boomClient 8080 localhost 60001 /ss 2500
 			> start GeTunnel 60001 Beat 60000 /p Muse 8080 /e 2
 
-			�܂���
+			または
 
 			> start boomClient 8080 localhost 60001 /ss 2500
 			> start GeTunnel 60001 192.168.111.102 60000 /p 192.168.222.203 8080 /e 2
 
-		2. Beat �ňȉ��̃R�}���h�����s����B
+		2. Beat で以下のコマンドを実行する。
 
 			> start GeTunnel 60000 localhost 60001 /r
 			> start boomServer 60001 localhost 8080
 			> start cmd /c SmplProxy
 
-		3. Melody �̃u���E�U�� HTTP�v���L�V�T�[�o�[ �� Hammy:8080 �܂��� 192.168.222.202:8080 �ɐݒ肷��B
+		3. Melody のブラウザの HTTPプロキシサーバー を Hammy:8080 または 192.168.222.202:8080 に設定する。
 
-		4. Melody �̃u���E�U�� http://Rhythm/ �܂��� http://192.168.111.103/ �ɐڑ�����B
+		4. Melody のブラウザで http://Rhythm/ または http://192.168.111.103/ に接続する。
 
-	b. Melody -> Beat:80 -> Rhythm:80 �ƒ��p����B
+	b. Melody -> Beat:80 -> Rhythm:80 と中継する。
 
-		1. Melody �ňȉ��̃R�}���h�����s����B
+		1. Melody で以下のコマンドを実行する。
 
 			> start boomClient 8080 localhost 60001 /ss 2500
 			> start GeTunnel 60001 Beat 80 /p Muse 8080 /e 2
 
-			�܂���
+			または
 
 			> start boomClient 8080 localhost 60001 /ss 2500
 			> start GeTunnel 60001 192.168.111.102 80 /p 192.168.222.203 8080 /e 2
 
-		2. Beat �ňȉ��̃R�}���h�����s����B
+		2. Beat で以下のコマンドを実行する。
 
 			> start GeTunnel 80 localhost 60001 /r
 			> start boomServer 60001 localhost 8080
 			> start cmd /c SmplProxy
 
-		3. Melody �̃u���E�U�� HTTP�v���L�V�T�[�o�[ �� localhost:8080 �ɐݒ肷��B
+		3. Melody のブラウザの HTTPプロキシサーバー を localhost:8080 に設定する。
 
-		4. Melody �̃u���E�U�� http://Rhythm/ �܂��� http://192.168.111.103/ �ɐڑ�����B
+		4. Melody のブラウザで http://Rhythm/ または http://192.168.111.103/ に接続する。
 
 
-���z�X�g��, IP�A�h���X, �|�[�g�ԍ��͎��ۂ̊��ɂ��킹�ĕύX���ĉ������B
+★ホスト名, IPアドレス, ポート番号は実際の環境にあわせて変更して下さい。

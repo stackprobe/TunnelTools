@@ -1,9 +1,9 @@
 ----
-���R�}���h���C��
+■コマンドライン
 
 	httpMonParse.exe INPUT-DIR OUTPUT-DIR
 
-		INPUT-DIR  ... ���̓f�B���N�g��
-		OUTPUT-DIR ... �o�̓f�B���N�g��
+		INPUT-DIR  ... 入力ディレクトリ
+		OUTPUT-DIR ... 出力ディレクトリ
 
-	���́E�o�̓f�B���N�g���́A���݂���f�B���N�g���ł��邱�ƁB
+	入力・出力ディレクトリは、存在するディレクトリであること。
