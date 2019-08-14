@@ -21,8 +21,6 @@
 　●通信データの暗号化・復号（暗号通信）             -> crypTunnel.exe
 　●パケットキャプチャ                               -> PackMon.exe
 
-　ソースコードを公開しています。
-
 
 ■動作環境
 
@@ -45,23 +43,6 @@
 　「使い方」フォルダを参照して下さい。
 
 　「マニュアル」フォルダに各プログラムについての説明があります。
-
-
-■ソースコード
-
-　1. GitHub
-
-　　https://github.com/stackprobe/Factory/tree/master/Labo/Socket/tunnel
-
-　2. アーカイブ
-
-　　以下の場所からダウンロードして下さい。
-　　当該ソースファイルは <Factory.zip>\Labo\Socket\tunnel\. の直下にあります。
-
-　　http://stackprobe.dip.jp/_kit/Factory
-
-
-　★最新のリポジトリ・アーカイブはリリース時のソースコードと異なるかもしれません。
 
 
 ■ライセンス表記
