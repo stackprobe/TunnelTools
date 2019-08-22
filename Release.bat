@@ -31,6 +31,9 @@ COPY C:\Factory\Labo\Socket\tunnel\SmplProxyPrms.txt out
 COPY C:\Factory\Resource\CP932.txt out
 COPY C:\Factory\Resource\JIS0208.txt out
 
+COPY AUTHORS out
+COPY LICENSE out
+
 C:\Factory\Tools\xcp.exe doc out
 C:\Factory\Tools\DirFltr.exe /EF out
 
