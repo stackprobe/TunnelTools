@@ -39,4 +39,4 @@ C:\Factory\Tools\DirFltr.exe /EF out
 
 C:\Factory\SubTools\zip.exe /O out TunnelTools
 
-PAUSE
+IF NOT "%1" == "/-P" PAUSE
