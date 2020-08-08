@@ -113,7 +113,7 @@ Melody -> Rhythm:80 は Muse が規制しているとします。(Beat:80 への
 
 			> start GeTunnel 60000 localhost 60001 /r
 			> start boomServer 60001 localhost 8080
-			> start cmd /c SmplProxy
+			> start cmd /c SimpleProxy
 
 		3. Melody のブラウザの HTTPプロキシサーバー を Hammy:8080 または 192.168.222.202:8080 に設定する。
 
@@ -135,7 +135,7 @@ Melody -> Rhythm:80 は Muse が規制しているとします。(Beat:80 への
 
 			> start GeTunnel 80 localhost 60001 /r
 			> start boomServer 60001 localhost 8080
-			> start cmd /c SmplProxy
+			> start cmd /c SimpleProxy
 
 		3. Melody のブラウザの HTTPプロキシサーバー を localhost:8080 に設定する。
 

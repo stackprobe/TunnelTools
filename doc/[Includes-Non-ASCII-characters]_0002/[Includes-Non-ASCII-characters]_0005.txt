@@ -3,7 +3,7 @@
 
 以下のコマンドを実行します。
 
-	> SmplProxy
+	> SimpleProxy
 
 ブラウザのプロキシサーバーを localhost:8080 に変更して下さい。
 ブラウザを開くと、HTTPProxy.exe を経由してインターネットにアクセスしているはずです。
@@ -13,7 +13,7 @@
 
 以下のコマンドを実行します。
 
-	> SmplProxy_FaceFilter
+	> SimpleProxy_FaceFilter
 
 ブラウザのプロキシサーバーを localhost:8080 に変更して下さい。
 ブラウザを開くと、HTTPでダウンロードした画像が sample\0005\Face.png に差し替わっているはずです。
@@ -23,7 +23,7 @@
 
 以下のコマンドを実行します。
 
-	> SmplProxy_SmplSaver
+	> SimpleProxy_SmplSaver
 
 ブラウザのプロキシサーバーを localhost:8080 に変更して下さい。
 ブラウザを開くと、HTTPでダウンロードしたコンテンツが "ダウンロード・コンテンツ" に保存されるはずです。
@@ -34,7 +34,7 @@
 ■ポート番号
 
 	ポート番号は 8080 を使用します。
-	ポート番号を変更するには SmplProxy.bat の HTTPProxy コマンドの第１引数を変更して下さい。
+	ポート番号を変更するには SimpleProxy.bat の HTTPProxy コマンドの第１引数を変更して下さい。
 
 ----
 ■制限というか問題点

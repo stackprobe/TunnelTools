@@ -1,2 +1,0 @@
-MD ダウンロード・コンテンツ
-HTTPProxy.exe 8080 a 1 //f SmplProxyPrms.txt /f- "HTTPPSimpleSaver.exe ダウンロード・コンテンツ"

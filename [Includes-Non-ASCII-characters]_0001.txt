@@ -12,8 +12,8 @@
 	C:\Factory\Labo\Socket\tunnel\PackMon.exe
 	C:\Factory\Labo\Socket\tunnel\revClient.exe
 	C:\Factory\Labo\Socket\tunnel\revServer.exe
-	C:\Factory\Labo\Socket\tunnel\SmplProxy.bat
-	C:\Factory\Labo\Socket\tunnel\SmplProxyPrms.txt
+	C:\Factory\Labo\Socket\tunnel\SimpleProxy.bat
+	C:\Factory\Labo\Socket\tunnel\SimpleProxyPrms.txt
 	C:\Factory\Labo\Socket\tunnel\Spoof.exe
 	C:\Factory\Labo\Socket\tunnel\Tunnel.exe
 	C:\Factory\Labo\Socket\tunnel\Tunnel2.exe
