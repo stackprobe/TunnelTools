@@ -23,7 +23,7 @@
 
 以下のコマンドを実行します。
 
-	> SimpleProxy_SmplSaver
+	> SimpleProxy_SimpleSaver
 
 ブラウザのプロキシサーバーを localhost:8080 に変更して下さい。
 ブラウザを開くと、HTTPでダウンロードしたコンテンツが "ダウンロード・コンテンツ" に保存されるはずです。
